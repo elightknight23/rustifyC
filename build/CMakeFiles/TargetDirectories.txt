@@ -1,0 +1,6 @@
+/Users/nithikdeva/rustifyC/build/CMakeFiles/intrinsics_gen.dir
+/Users/nithikdeva/rustifyC/build/CMakeFiles/omp_gen.dir
+/Users/nithikdeva/rustifyC/build/CMakeFiles/acc_gen.dir
+/Users/nithikdeva/rustifyC/build/CMakeFiles/rustifyC.dir
+/Users/nithikdeva/rustifyC/build/CMakeFiles/edit_cache.dir
+/Users/nithikdeva/rustifyC/build/CMakeFiles/rebuild_cache.dir
