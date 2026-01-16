@@ -1,16 +1,17 @@
 #include <stdio.h>
 
-// Pass index as argument so compiler can't pre-calculate everything
-void sensitive_calculation(int index) {
-    volatile int buffer[10]; // 'volatile' tells compiler: DO NOT OPTIMIZE THIS
-    buffer[index] = 42;      // The write
-    
-    // The read (prevents dead store elimination)
-    printf("Value: %d\n", buffer[index]); 
+void analyze_me(int dynamic_index) {
+    // 'volatile' forces the compiler to keep this array in the IR
+    volatile int buffer[10];
+
+    // Case 1: Constant Access
+    buffer[15] = 42;
+
+    // Case 2: Variable Access
+    buffer[dynamic_index] = 99;
 }
 
 int main() {
-    printf("Starting...\n");
-    sensitive_calculation(5);
+    analyze_me(2);
     return 0;
 }
