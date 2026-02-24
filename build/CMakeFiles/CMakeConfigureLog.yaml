@@ -23,6 +23,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -37,8 +39,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -46,6 +46,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/uname"
       - "/opt/homebrew/opt/llvm@15/bin/uname"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/uname"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/uname"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/uname"
       - "/opt/homebrew/bin/uname"
       - "/opt/homebrew/sbin/uname"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/uname"
@@ -57,6 +59,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -113,6 +117,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -127,8 +133,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -136,6 +140,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/gmake"
       - "/opt/homebrew/opt/llvm@15/bin/gmake"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/gmake"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
       - "/opt/homebrew/bin/gmake"
       - "/opt/homebrew/sbin/gmake"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/gmake"
@@ -150,14 +156,14 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/gmake"
       - "/opt/pmk/env/global/bin/gmake"
       - "/Library/Apple/usr/bin/gmake"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
       - "/Users/nithikdeva/development/flutter/bin/gmake"
       - "/Users/nithikdeva/.spicetify/gmake"
       - "/Users/nithikdeva/.pub-cache/bin/gmake"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/make"
       - "/opt/homebrew/opt/llvm@15/bin/make"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/make"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/make"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/make"
       - "/opt/homebrew/bin/make"
       - "/opt/homebrew/sbin/make"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/make"
@@ -169,6 +175,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -224,6 +232,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -326,6 +336,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -340,8 +352,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -349,6 +359,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/ar"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/ar"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/ar"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/ar"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/ar"
       - "/opt/homebrew/bin/ar"
       - "/opt/homebrew/sbin/ar"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/ar"
@@ -360,6 +372,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -409,6 +423,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -423,8 +439,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -434,6 +448,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -482,6 +498,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -496,8 +514,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -505,6 +521,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/strip"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/strip"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/strip"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/strip"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/strip"
       - "/opt/homebrew/bin/strip"
       - "/opt/homebrew/sbin/strip"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/strip"
@@ -516,6 +534,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -564,6 +584,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -578,8 +600,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -587,6 +607,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/ld"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/ld"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/ld"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/ld"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/ld"
       - "/opt/homebrew/bin/ld"
       - "/opt/homebrew/sbin/ld"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/ld"
@@ -598,6 +620,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -647,6 +671,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -661,8 +687,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -672,6 +696,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -721,6 +747,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -735,8 +763,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -746,6 +772,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -795,6 +823,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -809,8 +839,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -820,6 +848,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -869,6 +899,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -883,8 +915,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -894,6 +924,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -943,6 +975,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -957,8 +991,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -968,6 +1000,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -1017,6 +1051,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -1031,8 +1067,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -1042,6 +1076,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -1090,6 +1126,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -1104,8 +1142,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -1113,6 +1149,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/tapi"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/tapi"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/tapi"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
       - "/opt/homebrew/bin/tapi"
       - "/opt/homebrew/sbin/tapi"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/tapi"
@@ -1127,8 +1165,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
       - "/opt/pmk/env/global/bin/tapi"
       - "/Library/Apple/usr/bin/tapi"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
       - "/Users/nithikdeva/development/flutter/bin/tapi"
       - "/Users/nithikdeva/.spicetify/tapi"
       - "/Users/nithikdeva/.pub-cache/bin/tapi"
@@ -1138,6 +1174,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -1190,6 +1228,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -1204,8 +1244,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -1214,6 +1252,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ar-15.0"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ar-15.0"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ar-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar-15.0"
       - "/opt/homebrew/bin/llvm-ar-15.0"
       - "/opt/homebrew/sbin/llvm-ar-15.0"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ar-15.0"
@@ -1228,8 +1268,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-15.0"
       - "/opt/pmk/env/global/bin/llvm-ar-15.0"
       - "/Library/Apple/usr/bin/llvm-ar-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar-15.0"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ar-15.0"
       - "/Users/nithikdeva/.spicetify/llvm-ar-15.0"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ar-15.0"
@@ -1237,6 +1275,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ar-15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ar-15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ar-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar-15"
       - "/opt/homebrew/bin/llvm-ar-15"
       - "/opt/homebrew/sbin/llvm-ar-15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ar-15"
@@ -1251,8 +1291,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-15"
       - "/opt/pmk/env/global/bin/llvm-ar-15"
       - "/Library/Apple/usr/bin/llvm-ar-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar-15"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ar-15"
       - "/Users/nithikdeva/.spicetify/llvm-ar-15"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ar-15"
@@ -1260,6 +1298,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ar15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ar15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ar15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar15"
       - "/opt/homebrew/bin/llvm-ar15"
       - "/opt/homebrew/sbin/llvm-ar15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ar15"
@@ -1274,8 +1314,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar15"
       - "/opt/pmk/env/global/bin/llvm-ar15"
       - "/Library/Apple/usr/bin/llvm-ar15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar15"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ar15"
       - "/Users/nithikdeva/.spicetify/llvm-ar15"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ar15"
@@ -1285,6 +1323,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -1337,6 +1377,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -1351,8 +1393,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -1361,6 +1401,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ranlib-15.0"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ranlib-15.0"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ranlib-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib-15.0"
       - "/opt/homebrew/bin/llvm-ranlib-15.0"
       - "/opt/homebrew/sbin/llvm-ranlib-15.0"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ranlib-15.0"
@@ -1375,8 +1417,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-15.0"
       - "/opt/pmk/env/global/bin/llvm-ranlib-15.0"
       - "/Library/Apple/usr/bin/llvm-ranlib-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib-15.0"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ranlib-15.0"
       - "/Users/nithikdeva/.spicetify/llvm-ranlib-15.0"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ranlib-15.0"
@@ -1384,6 +1424,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ranlib-15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ranlib-15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ranlib-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib-15"
       - "/opt/homebrew/bin/llvm-ranlib-15"
       - "/opt/homebrew/sbin/llvm-ranlib-15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ranlib-15"
@@ -1398,8 +1440,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-15"
       - "/opt/pmk/env/global/bin/llvm-ranlib-15"
       - "/Library/Apple/usr/bin/llvm-ranlib-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib-15"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ranlib-15"
       - "/Users/nithikdeva/.spicetify/llvm-ranlib-15"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ranlib-15"
@@ -1407,6 +1447,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ranlib15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ranlib15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ranlib15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib15"
       - "/opt/homebrew/bin/llvm-ranlib15"
       - "/opt/homebrew/sbin/llvm-ranlib15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ranlib15"
@@ -1421,8 +1463,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib15"
       - "/opt/pmk/env/global/bin/llvm-ranlib15"
       - "/Library/Apple/usr/bin/llvm-ranlib15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib15"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ranlib15"
       - "/Users/nithikdeva/.spicetify/llvm-ranlib15"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ranlib15"
@@ -1432,6 +1472,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -1484,6 +1526,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -1498,8 +1542,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -1508,6 +1550,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/clang-scan-deps-15.0"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/clang-scan-deps-15.0"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/clang-scan-deps-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps-15.0"
       - "/opt/homebrew/bin/clang-scan-deps-15.0"
       - "/opt/homebrew/sbin/clang-scan-deps-15.0"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/clang-scan-deps-15.0"
@@ -1522,8 +1566,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-15.0"
       - "/opt/pmk/env/global/bin/clang-scan-deps-15.0"
       - "/Library/Apple/usr/bin/clang-scan-deps-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps-15.0"
       - "/Users/nithikdeva/development/flutter/bin/clang-scan-deps-15.0"
       - "/Users/nithikdeva/.spicetify/clang-scan-deps-15.0"
       - "/Users/nithikdeva/.pub-cache/bin/clang-scan-deps-15.0"
@@ -1531,6 +1573,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/clang-scan-deps-15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/clang-scan-deps-15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/clang-scan-deps-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps-15"
       - "/opt/homebrew/bin/clang-scan-deps-15"
       - "/opt/homebrew/sbin/clang-scan-deps-15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/clang-scan-deps-15"
@@ -1545,8 +1589,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-15"
       - "/opt/pmk/env/global/bin/clang-scan-deps-15"
       - "/Library/Apple/usr/bin/clang-scan-deps-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps-15"
       - "/Users/nithikdeva/development/flutter/bin/clang-scan-deps-15"
       - "/Users/nithikdeva/.spicetify/clang-scan-deps-15"
       - "/Users/nithikdeva/.pub-cache/bin/clang-scan-deps-15"
@@ -1554,6 +1596,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/clang-scan-deps15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/clang-scan-deps15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/clang-scan-deps15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps15"
       - "/opt/homebrew/bin/clang-scan-deps15"
       - "/opt/homebrew/sbin/clang-scan-deps15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/clang-scan-deps15"
@@ -1568,8 +1612,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps15"
       - "/opt/pmk/env/global/bin/clang-scan-deps15"
       - "/Library/Apple/usr/bin/clang-scan-deps15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps15"
       - "/Users/nithikdeva/development/flutter/bin/clang-scan-deps15"
       - "/Users/nithikdeva/.spicetify/clang-scan-deps15"
       - "/Users/nithikdeva/.pub-cache/bin/clang-scan-deps15"
@@ -1579,6 +1621,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -1634,6 +1678,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -1740,6 +1786,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -1754,8 +1802,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -1764,6 +1810,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ar-15.0"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ar-15.0"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ar-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar-15.0"
       - "/opt/homebrew/bin/llvm-ar-15.0"
       - "/opt/homebrew/sbin/llvm-ar-15.0"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ar-15.0"
@@ -1778,8 +1826,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-15.0"
       - "/opt/pmk/env/global/bin/llvm-ar-15.0"
       - "/Library/Apple/usr/bin/llvm-ar-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar-15.0"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ar-15.0"
       - "/Users/nithikdeva/.spicetify/llvm-ar-15.0"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ar-15.0"
@@ -1787,6 +1833,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ar-15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ar-15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ar-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar-15"
       - "/opt/homebrew/bin/llvm-ar-15"
       - "/opt/homebrew/sbin/llvm-ar-15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ar-15"
@@ -1801,8 +1849,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-15"
       - "/opt/pmk/env/global/bin/llvm-ar-15"
       - "/Library/Apple/usr/bin/llvm-ar-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar-15"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ar-15"
       - "/Users/nithikdeva/.spicetify/llvm-ar-15"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ar-15"
@@ -1810,6 +1856,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ar15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ar15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ar15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar15"
       - "/opt/homebrew/bin/llvm-ar15"
       - "/opt/homebrew/sbin/llvm-ar15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ar15"
@@ -1824,8 +1872,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar15"
       - "/opt/pmk/env/global/bin/llvm-ar15"
       - "/Library/Apple/usr/bin/llvm-ar15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ar15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ar15"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ar15"
       - "/Users/nithikdeva/.spicetify/llvm-ar15"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ar15"
@@ -1835,6 +1881,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -1887,6 +1935,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -1901,8 +1951,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -1911,6 +1959,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ranlib-15.0"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ranlib-15.0"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ranlib-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib-15.0"
       - "/opt/homebrew/bin/llvm-ranlib-15.0"
       - "/opt/homebrew/sbin/llvm-ranlib-15.0"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ranlib-15.0"
@@ -1925,8 +1975,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-15.0"
       - "/opt/pmk/env/global/bin/llvm-ranlib-15.0"
       - "/Library/Apple/usr/bin/llvm-ranlib-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib-15.0"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ranlib-15.0"
       - "/Users/nithikdeva/.spicetify/llvm-ranlib-15.0"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ranlib-15.0"
@@ -1934,6 +1982,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ranlib-15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ranlib-15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ranlib-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib-15"
       - "/opt/homebrew/bin/llvm-ranlib-15"
       - "/opt/homebrew/sbin/llvm-ranlib-15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ranlib-15"
@@ -1948,8 +1998,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-15"
       - "/opt/pmk/env/global/bin/llvm-ranlib-15"
       - "/Library/Apple/usr/bin/llvm-ranlib-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib-15"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ranlib-15"
       - "/Users/nithikdeva/.spicetify/llvm-ranlib-15"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ranlib-15"
@@ -1957,6 +2005,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/llvm-ranlib15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/llvm-ranlib15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/llvm-ranlib15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib15"
       - "/opt/homebrew/bin/llvm-ranlib15"
       - "/opt/homebrew/sbin/llvm-ranlib15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/llvm-ranlib15"
@@ -1971,8 +2021,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib15"
       - "/opt/pmk/env/global/bin/llvm-ranlib15"
       - "/Library/Apple/usr/bin/llvm-ranlib15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-ranlib15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-ranlib15"
       - "/Users/nithikdeva/development/flutter/bin/llvm-ranlib15"
       - "/Users/nithikdeva/.spicetify/llvm-ranlib15"
       - "/Users/nithikdeva/.pub-cache/bin/llvm-ranlib15"
@@ -1982,6 +2030,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -2034,6 +2084,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -2048,8 +2100,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -2058,6 +2108,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/clang-scan-deps-15.0"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/clang-scan-deps-15.0"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/clang-scan-deps-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps-15.0"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps-15.0"
       - "/opt/homebrew/bin/clang-scan-deps-15.0"
       - "/opt/homebrew/sbin/clang-scan-deps-15.0"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/clang-scan-deps-15.0"
@@ -2072,8 +2124,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-15.0"
       - "/opt/pmk/env/global/bin/clang-scan-deps-15.0"
       - "/Library/Apple/usr/bin/clang-scan-deps-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps-15.0"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps-15.0"
       - "/Users/nithikdeva/development/flutter/bin/clang-scan-deps-15.0"
       - "/Users/nithikdeva/.spicetify/clang-scan-deps-15.0"
       - "/Users/nithikdeva/.pub-cache/bin/clang-scan-deps-15.0"
@@ -2081,6 +2131,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/clang-scan-deps-15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/clang-scan-deps-15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/clang-scan-deps-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps-15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps-15"
       - "/opt/homebrew/bin/clang-scan-deps-15"
       - "/opt/homebrew/sbin/clang-scan-deps-15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/clang-scan-deps-15"
@@ -2095,8 +2147,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-15"
       - "/opt/pmk/env/global/bin/clang-scan-deps-15"
       - "/Library/Apple/usr/bin/clang-scan-deps-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps-15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps-15"
       - "/Users/nithikdeva/development/flutter/bin/clang-scan-deps-15"
       - "/Users/nithikdeva/.spicetify/clang-scan-deps-15"
       - "/Users/nithikdeva/.pub-cache/bin/clang-scan-deps-15"
@@ -2104,6 +2154,8 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/clang-scan-deps15"
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/clang-scan-deps15"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/clang-scan-deps15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps15"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps15"
       - "/opt/homebrew/bin/clang-scan-deps15"
       - "/opt/homebrew/sbin/clang-scan-deps15"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/clang-scan-deps15"
@@ -2118,8 +2170,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps15"
       - "/opt/pmk/env/global/bin/clang-scan-deps15"
       - "/Library/Apple/usr/bin/clang-scan-deps15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/clang-scan-deps15"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/clang-scan-deps15"
       - "/Users/nithikdeva/development/flutter/bin/clang-scan-deps15"
       - "/Users/nithikdeva/.spicetify/clang-scan-deps15"
       - "/Users/nithikdeva/.pub-cache/bin/clang-scan-deps15"
@@ -2129,6 +2179,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -2177,6 +2229,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -2191,8 +2245,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -2200,6 +2252,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/install_name_tool"
       - "/opt/homebrew/opt/llvm@15/bin/install_name_tool"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/install_name_tool"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/install_name_tool"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/install_name_tool"
       - "/opt/homebrew/bin/install_name_tool"
       - "/opt/homebrew/sbin/install_name_tool"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/install_name_tool"
@@ -2211,6 +2265,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -2246,8 +2302,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-fOWp3o"
-      binary: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-fOWp3o"
+      source: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v9ZNsY"
+      binary: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v9ZNsY"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
@@ -2260,19 +2316,19 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-fOWp3o'
+        Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v9ZNsY'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_67442/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_67442.dir/build.make CMakeFiles/cmTC_67442.dir/build
-        Building C object CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o
-        /opt/homebrew/opt/llvm@15/bin/clang   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ab56b/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ab56b.dir/build.make CMakeFiles/cmTC_ab56b.dir/build
+        Building C object CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/opt/llvm@15/bin/clang   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Homebrew clang version 15.0.7
         Target: arm64-apple-darwin25.2.0
         Thread model: posix
         InstalledDir: /opt/homebrew/opt/llvm@15/bin
         clang-15: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
          (in-process)
-         "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-15" -cc1 -triple arm64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-fOWp3o -resource-dir /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7 -dependency-file CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -fdebug-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-fOWp3o -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+         "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-15" -cc1 -triple arm64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v9ZNsY -resource-dir /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7 -dependency-file CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -fdebug-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v9ZNsY -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 15.0.7 based upon LLVM 15.0.7 default target arm64-apple-darwin25.2.0
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks"
@@ -2282,13 +2338,13 @@ events:
          /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_67442
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67442.dir/link.txt --verbose=1
+        Linking C executable cmTC_ab56b
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab56b.dir/link.txt --verbose=1
         Homebrew clang version 15.0.7
         Target: arm64-apple-darwin25.2.0
         Thread model: posix
         InstalledDir: /opt/homebrew/opt/llvm@15/bin
-         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm@15/15.0.7/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 16.0.0 16.0.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -o cmTC_67442 -L/opt/homebrew/opt/llvm@15/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a
+         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm@15/15.0.7/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 16.0.0 16.0.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -o cmTC_ab56b -L/opt/homebrew/opt/llvm@15/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1230.1
         BUILD 06:36:05 Dec  2 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
@@ -2302,7 +2358,7 @@ events:
         Framework search paths:
         	/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks
         ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@15/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@15/15.0.7/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly
-        /opt/homebrew/opt/llvm@15/bin/clang  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib -v -Wl,-v CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -o cmTC_67442
+        /opt/homebrew/opt/llvm@15/bin/clang  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib -v -Wl,-v CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -o cmTC_ab56b
         
       exitCode: 0
   -
@@ -2342,19 +2398,19 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-fOWp3o']
+        ignore line: [Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v9ZNsY']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_67442/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_67442.dir/build.make CMakeFiles/cmTC_67442.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/opt/homebrew/opt/llvm@15/bin/clang   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ab56b/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ab56b.dir/build.make CMakeFiles/cmTC_ab56b.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/opt/homebrew/opt/llvm@15/bin/clang   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Homebrew clang version 15.0.7]
         ignore line: [Target: arm64-apple-darwin25.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/homebrew/opt/llvm@15/bin]
         ignore line: [clang-15: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ (in-process)]
-        ignore line: [ "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-15" -cc1 -triple arm64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-fOWp3o -resource-dir /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7 -dependency-file CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -fdebug-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-fOWp3o -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-15" -cc1 -triple arm64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v9ZNsY -resource-dir /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7 -dependency-file CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -fdebug-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v9ZNsY -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 15.0.7 based upon LLVM 15.0.7 default target arm64-apple-darwin25.2.0]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks"]
@@ -2364,13 +2420,13 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_67442]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67442.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_ab56b]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab56b.dir/link.txt --verbose=1]
         ignore line: [Homebrew clang version 15.0.7]
         ignore line: [Target: arm64-apple-darwin25.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/homebrew/opt/llvm@15/bin]
-        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm@15/15.0.7/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 16.0.0 16.0.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -o cmTC_67442 -L/opt/homebrew/opt/llvm@15/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm@15/15.0.7/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 16.0.0 16.0.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -o cmTC_ab56b -L/opt/homebrew/opt/llvm@15/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o -lSystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a]
           arg [/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -2385,12 +2441,12 @@ events:
           arg [-syslibroot] ==> ignore
           arg [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_67442] ==> ignore
+          arg [cmTC_ab56b] ==> ignore
           arg [-L/opt/homebrew/opt/llvm@15/lib] ==> dir [/opt/homebrew/opt/llvm@15/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_67442.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_ab56b.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a]
         linker tool for 'C': /usr/bin/ld
@@ -2433,8 +2489,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-x9Lzkx"
-      binary: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-x9Lzkx"
+      source: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-OfO8QI"
+      binary: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-OfO8QI"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-scan-deps"
       CMAKE_CXX_FLAGS: ""
@@ -2448,19 +2504,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-x9Lzkx'
+        Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-OfO8QI'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_700d0/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_700d0.dir/build.make CMakeFiles/cmTC_700d0.dir/build
-        Building CXX object CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o
-        /opt/homebrew/opt/llvm@15/bin/clang++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7fd53/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7fd53.dir/build.make CMakeFiles/cmTC_7fd53.dir/build
+        Building CXX object CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/homebrew/opt/llvm@15/bin/clang++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Homebrew clang version 15.0.7
         Target: arm64-apple-darwin25.2.0
         Thread model: posix
         InstalledDir: /opt/homebrew/opt/llvm@15/bin
         clang-15: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
          (in-process)
-         "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-15" -cc1 -triple arm64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-x9Lzkx -resource-dir /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7 -dependency-file CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/opt/llvm@15/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-x9Lzkx -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-15" -cc1 -triple arm64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-OfO8QI -resource-dir /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7 -dependency-file CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/opt/llvm@15/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-OfO8QI -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 15.0.7 based upon LLVM 15.0.7 default target arm64-apple-darwin25.2.0
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks"
@@ -2471,13 +2527,13 @@ events:
          /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_700d0
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_700d0.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_7fd53
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7fd53.dir/link.txt --verbose=1
         Homebrew clang version 15.0.7
         Target: arm64-apple-darwin25.2.0
         Thread model: posix
         InstalledDir: /opt/homebrew/opt/llvm@15/bin
-         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm@15/15.0.7/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 16.0.0 16.0.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -o cmTC_700d0 -L/opt/homebrew/opt/llvm@15/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a
+         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm@15/15.0.7/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 16.0.0 16.0.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -o cmTC_7fd53 -L/opt/homebrew/opt/llvm@15/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1230.1
         BUILD 06:36:05 Dec  2 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
@@ -2491,7 +2547,7 @@ events:
         Framework search paths:
         	/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks
         ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@15/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@15/15.0.7/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly
-        /opt/homebrew/opt/llvm@15/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib -v -Wl,-v CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_700d0
+        /opt/homebrew/opt/llvm@15/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib -v -Wl,-v CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7fd53
         
       exitCode: 0
   -
@@ -2533,19 +2589,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-x9Lzkx']
+        ignore line: [Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-OfO8QI']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_700d0/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_700d0.dir/build.make CMakeFiles/cmTC_700d0.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/opt/homebrew/opt/llvm@15/bin/clang++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7fd53/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7fd53.dir/build.make CMakeFiles/cmTC_7fd53.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/homebrew/opt/llvm@15/bin/clang++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Homebrew clang version 15.0.7]
         ignore line: [Target: arm64-apple-darwin25.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/homebrew/opt/llvm@15/bin]
         ignore line: [clang-15: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ (in-process)]
-        ignore line: [ "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-15" -cc1 -triple arm64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-x9Lzkx -resource-dir /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7 -dependency-file CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/opt/llvm@15/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-x9Lzkx -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-15" -cc1 -triple arm64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -funwind-tables=2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 1022.1 -v -fcoverage-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-OfO8QI -resource-dir /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7 -dependency-file CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -stdlib=libc++ -internal-isystem /opt/homebrew/opt/llvm@15/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-OfO8QI -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 15.0.7 based upon LLVM 15.0.7 default target arm64-apple-darwin25.2.0]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks"]
@@ -2556,13 +2612,13 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_700d0]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_700d0.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_7fd53]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7fd53.dir/link.txt --verbose=1]
         ignore line: [Homebrew clang version 15.0.7]
         ignore line: [Target: arm64-apple-darwin25.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /opt/homebrew/opt/llvm@15/bin]
-        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm@15/15.0.7/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 16.0.0 16.0.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -o cmTC_700d0 -L/opt/homebrew/opt/llvm@15/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm@15/15.0.7/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 16.0.0 16.0.0 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -o cmTC_7fd53 -L/opt/homebrew/opt/llvm@15/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a]
           arg [/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -2577,12 +2633,12 @@ events:
           arg [-syslibroot] ==> ignore
           arg [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_700d0] ==> ignore
+          arg [cmTC_7fd53] ==> ignore
           arg [-L/opt/homebrew/opt/llvm@15/lib] ==> dir [/opt/homebrew/opt/llvm@15/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_700d0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_7fd53.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm@15/15.0.7/lib/clang/15.0.7/lib/darwin/libclang_rt.osx.a]
@@ -2642,6 +2698,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -2656,8 +2714,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -2696,6 +2752,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/ffi.h"
       - "/opt/homebrew/opt/llvm@15/bin/ffi.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/ffi.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/ffi.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/ffi.h"
       - "/opt/homebrew/bin/ffi.h"
       - "/opt/homebrew/sbin/ffi.h"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/ffi.h"
@@ -2710,8 +2768,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/ffi.h"
       - "/opt/pmk/env/global/bin/ffi.h"
       - "/Library/Apple/usr/bin/ffi.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/ffi.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/ffi.h"
       - "/Users/nithikdeva/development/flutter/bin/ffi.h"
       - "/Users/nithikdeva/.spicetify/ffi.h"
       - "/Users/nithikdeva/.pub-cache/bin/ffi.h"
@@ -2752,6 +2808,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -2828,6 +2886,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -2842,8 +2902,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -2882,6 +2940,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/ffi.framework/Headers/ffi.h"
       - "/opt/homebrew/opt/llvm@15/bin/ffi.framework/Headers/ffi.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/ffi.framework/Headers/ffi.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/ffi.framework/Headers/ffi.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/ffi.framework/Headers/ffi.h"
       - "/opt/homebrew/bin/ffi.framework/Headers/ffi.h"
       - "/opt/homebrew/sbin/ffi.framework/Headers/ffi.h"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/ffi.framework/Headers/ffi.h"
@@ -2896,8 +2956,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/ffi.framework/Headers/ffi.h"
       - "/opt/pmk/env/global/bin/ffi.framework/Headers/ffi.h"
       - "/Library/Apple/usr/bin/ffi.framework/Headers/ffi.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/ffi.framework/Headers/ffi.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/ffi.framework/Headers/ffi.h"
       - "/Users/nithikdeva/development/flutter/bin/ffi.framework/Headers/ffi.h"
       - "/Users/nithikdeva/.spicetify/ffi.framework/Headers/ffi.h"
       - "/Users/nithikdeva/.pub-cache/bin/ffi.framework/Headers/ffi.h"
@@ -2935,6 +2993,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/ffi/ffi.h"
       - "/opt/homebrew/opt/llvm@15/bin/ffi/ffi.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/ffi/ffi.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/ffi/ffi.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/ffi/ffi.h"
       - "/opt/homebrew/bin/ffi/ffi.h"
       - "/opt/homebrew/sbin/ffi/ffi.h"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/ffi/ffi.h"
@@ -2949,8 +3009,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/ffi/ffi.h"
       - "/opt/pmk/env/global/bin/ffi/ffi.h"
       - "/Library/Apple/usr/bin/ffi/ffi.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/ffi/ffi.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/ffi/ffi.h"
       - "/Users/nithikdeva/development/flutter/bin/ffi/ffi.h"
       - "/Users/nithikdeva/.spicetify/ffi/ffi.h"
       - "/Users/nithikdeva/.pub-cache/bin/ffi/ffi.h"
@@ -2962,6 +3020,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -3037,6 +3097,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -3046,8 +3108,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -3070,6 +3130,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -3079,8 +3141,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libffi.tbd"
@@ -3091,6 +3151,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -3153,8 +3215,8 @@ events:
     checks:
       - "Performing Test HAVE_FFI_CALL"
     directories:
-      source: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-9YM2vy"
-      binary: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-9YM2vy"
+      source: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-ynYyPX"
+      binary: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-ynYyPX"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
@@ -3168,16 +3230,16 @@ events:
       variable: "HAVE_FFI_CALL"
       cached: true
       stdout: |
-        Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-9YM2vy'
+        Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-ynYyPX'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4e309/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4e309.dir/build.make CMakeFiles/cmTC_4e309.dir/build
-        Building C object CMakeFiles/cmTC_4e309.dir/src.c.o
-        /opt/homebrew/opt/llvm@15/bin/clang -DHAVE_FFI_CALL  -arch arm64 -MD -MT CMakeFiles/cmTC_4e309.dir/src.c.o -MF CMakeFiles/cmTC_4e309.dir/src.c.o.d -o CMakeFiles/cmTC_4e309.dir/src.c.o -c /Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-9YM2vy/src.c
-        Linking C executable cmTC_4e309
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e309.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_574a7/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_574a7.dir/build.make CMakeFiles/cmTC_574a7.dir/build
+        Building C object CMakeFiles/cmTC_574a7.dir/src.c.o
+        /opt/homebrew/opt/llvm@15/bin/clang -DHAVE_FFI_CALL  -arch arm64 -MD -MT CMakeFiles/cmTC_574a7.dir/src.c.o -MF CMakeFiles/cmTC_574a7.dir/src.c.o.d -o CMakeFiles/cmTC_574a7.dir/src.c.o -c /Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-ynYyPX/src.c
+        Linking C executable cmTC_574a7
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_574a7.dir/link.txt --verbose=1
         ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@15/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@15/15.0.7/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly
-        /opt/homebrew/opt/llvm@15/bin/clang  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib  CMakeFiles/cmTC_4e309.dir/src.c.o -o cmTC_4e309  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libffi.tbd
+        /opt/homebrew/opt/llvm@15/bin/clang  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib  CMakeFiles/cmTC_574a7.dir/src.c.o -o cmTC_574a7  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libffi.tbd
         
       exitCode: 0
   -
@@ -3208,6 +3270,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -3217,8 +3281,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -3241,6 +3303,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -3250,8 +3314,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -3273,6 +3335,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -3282,8 +3346,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -3305,6 +3367,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -3314,8 +3378,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libcurses.tbd"
@@ -3326,6 +3388,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -3388,8 +3452,8 @@ events:
     checks:
       - "Performing Test Terminfo_LINKABLE"
     directories:
-      source: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-wd9I5J"
-      binary: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-wd9I5J"
+      source: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v6YLZp"
+      binary: "/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v6YLZp"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm@15/15.0.7/bin/clang-scan-deps"
       CMAKE_C_FLAGS: ""
@@ -3403,16 +3467,16 @@ events:
       variable: "Terminfo_LINKABLE"
       cached: true
       stdout: |
-        Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-wd9I5J'
+        Change Dir: '/Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v6YLZp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b1806/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b1806.dir/build.make CMakeFiles/cmTC_b1806.dir/build
-        Building C object CMakeFiles/cmTC_b1806.dir/src.c.o
-        /opt/homebrew/opt/llvm@15/bin/clang -DTerminfo_LINKABLE  -arch arm64 -MD -MT CMakeFiles/cmTC_b1806.dir/src.c.o -MF CMakeFiles/cmTC_b1806.dir/src.c.o.d -o CMakeFiles/cmTC_b1806.dir/src.c.o -c /Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-wd9I5J/src.c
-        Linking C executable cmTC_b1806
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1806.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4c404/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4c404.dir/build.make CMakeFiles/cmTC_4c404.dir/build
+        Building C object CMakeFiles/cmTC_4c404.dir/src.c.o
+        /opt/homebrew/opt/llvm@15/bin/clang -DTerminfo_LINKABLE  -arch arm64 -MD -MT CMakeFiles/cmTC_4c404.dir/src.c.o -MF CMakeFiles/cmTC_4c404.dir/src.c.o.d -o CMakeFiles/cmTC_4c404.dir/src.c.o -c /Users/nithikdeva/rustifyC/build/CMakeFiles/CMakeScratch/TryCompile-v6YLZp/src.c
+        Linking C executable cmTC_4c404
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c404.dir/link.txt --verbose=1
         ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@15/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@15/15.0.7/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly
-        /opt/homebrew/opt/llvm@15/bin/clang  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib  CMakeFiles/cmTC_b1806.dir/src.c.o -o cmTC_b1806  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libcurses.tbd
+        /opt/homebrew/opt/llvm@15/bin/clang  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib  CMakeFiles/cmTC_4c404.dir/src.c.o -o cmTC_4c404  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libcurses.tbd
         
       exitCode: 0
   -
@@ -3445,6 +3509,10 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/include/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/include/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/include/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/include/"
@@ -3473,10 +3541,6 @@ events:
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/include/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/include/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/include/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/include/"
@@ -3554,6 +3618,10 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/zlib.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/include/zlib.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/zlib.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/zlib.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/zlib.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/include/zlib.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/zlib.h"
       - "/opt/homebrew/bin/include/zlib.h"
       - "/opt/homebrew/bin/zlib.h"
       - "/opt/homebrew/sbin/include/zlib.h"
@@ -3582,10 +3650,6 @@ events:
       - "/opt/pmk/env/global/bin/zlib.h"
       - "/Library/Apple/usr/bin/include/zlib.h"
       - "/Library/Apple/usr/bin/zlib.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/include/zlib.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/zlib.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/include/zlib.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/zlib.h"
       - "/Users/nithikdeva/development/flutter/bin/include/zlib.h"
       - "/Users/nithikdeva/development/flutter/bin/zlib.h"
       - "/Users/nithikdeva/.spicetify/include/zlib.h"
@@ -3601,6 +3665,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -3683,6 +3749,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -3692,8 +3760,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -3748,6 +3814,22 @@ events:
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/bin/"
@@ -3820,22 +3902,6 @@ events:
       - "/sbin/"
       - "/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.spicetify/"
@@ -3860,6 +3926,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -3943,6 +4011,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -3952,8 +4022,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -4012,6 +4080,24 @@ events:
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/bin/"
@@ -4093,24 +4179,6 @@ events:
       - "/sbin/"
       - "/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.spicetify/"
@@ -4308,6 +4376,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -4384,6 +4454,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -4398,8 +4470,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -4438,6 +4508,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/zstd.h"
       - "/opt/homebrew/opt/llvm@15/bin/zstd.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/zstd.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/zstd.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/zstd.h"
       - "/opt/homebrew/bin/zstd.h"
       - "/opt/homebrew/sbin/zstd.h"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/zstd.h"
@@ -4452,8 +4524,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/zstd.h"
       - "/opt/pmk/env/global/bin/zstd.h"
       - "/Library/Apple/usr/bin/zstd.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/zstd.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/zstd.h"
       - "/Users/nithikdeva/development/flutter/bin/zstd.h"
       - "/Users/nithikdeva/.spicetify/zstd.h"
       - "/Users/nithikdeva/.pub-cache/bin/zstd.h"
@@ -4467,6 +4537,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -4543,6 +4615,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -4552,8 +4626,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -4576,6 +4648,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -4585,8 +4659,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -4599,6 +4671,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -4678,6 +4752,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -4692,8 +4768,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -4726,6 +4800,7 @@ events:
       - "/opt/local/bin/"
       - "/opt/local/sbin/"
       - "/opt/local/"
+      - "/Users/nithikdeva/Applications/"
       - "/Applications/"
       - "/Applications/Xcode.app/Contents/Applications/"
       - "/Applications/Xcode.app/Contents/Developer/Applications/"
@@ -4742,6 +4817,10 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/pkgconf"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/pkg-config"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/pkgconf"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/pkgconf"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/pkg-config"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/pkgconf"
     found: "/opt/homebrew/bin/pkg-config"
     search_context:
       CMAKE_PREFIX_PATH:
@@ -4750,6 +4829,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -4790,6 +4871,7 @@ events:
         - "/sw"
         - "/opt/local"
       CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/nithikdeva/Applications"
         - "/Applications"
         - "/Applications/Xcode.app/Contents/Applications"
         - "/Applications/Xcode.app/Contents/Developer/Applications"
@@ -4828,6 +4910,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -4907,6 +4991,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -4916,8 +5002,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -4940,6 +5024,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -4949,8 +5035,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd"
@@ -4961,6 +5045,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -5044,6 +5130,10 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/libxml2/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml2/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml2/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/libxml2/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/libxml2/"
@@ -5072,10 +5162,6 @@ events:
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/libxml2/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml2/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml2/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/libxml2/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/libxml2/"
@@ -5153,6 +5239,10 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/libxml.framework/Headers/xpath.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/libxml2/libxml.framework/Headers/xpath.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/libxml.framework/Headers/xpath.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml2/libxml.framework/Headers/xpath.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml.framework/Headers/xpath.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml2/libxml.framework/Headers/xpath.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml.framework/Headers/xpath.h"
       - "/opt/homebrew/bin/libxml2/libxml.framework/Headers/xpath.h"
       - "/opt/homebrew/bin/libxml.framework/Headers/xpath.h"
       - "/opt/homebrew/sbin/libxml2/libxml.framework/Headers/xpath.h"
@@ -5181,10 +5271,6 @@ events:
       - "/opt/pmk/env/global/bin/libxml.framework/Headers/xpath.h"
       - "/Library/Apple/usr/bin/libxml2/libxml.framework/Headers/xpath.h"
       - "/Library/Apple/usr/bin/libxml.framework/Headers/xpath.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml2/libxml.framework/Headers/xpath.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml.framework/Headers/xpath.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml2/libxml.framework/Headers/xpath.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml.framework/Headers/xpath.h"
       - "/Users/nithikdeva/development/flutter/bin/libxml2/libxml.framework/Headers/xpath.h"
       - "/Users/nithikdeva/development/flutter/bin/libxml.framework/Headers/xpath.h"
       - "/Users/nithikdeva/.spicetify/libxml2/libxml.framework/Headers/xpath.h"
@@ -5261,6 +5347,10 @@ events:
       - "/opt/homebrew/opt/llvm@15/bin/libxml/xpath.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/libxml2/libxml/xpath.h"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/libxml/xpath.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml2/libxml/xpath.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml/xpath.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml2/libxml/xpath.h"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml/xpath.h"
       - "/opt/homebrew/bin/libxml2/libxml/xpath.h"
       - "/opt/homebrew/bin/libxml/xpath.h"
       - "/opt/homebrew/sbin/libxml2/libxml/xpath.h"
@@ -5289,10 +5379,6 @@ events:
       - "/opt/pmk/env/global/bin/libxml/xpath.h"
       - "/Library/Apple/usr/bin/libxml2/libxml/xpath.h"
       - "/Library/Apple/usr/bin/libxml/xpath.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml2/libxml/xpath.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml/xpath.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml2/libxml/xpath.h"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml/xpath.h"
       - "/Users/nithikdeva/development/flutter/bin/libxml2/libxml/xpath.h"
       - "/Users/nithikdeva/development/flutter/bin/libxml/xpath.h"
       - "/Users/nithikdeva/.spicetify/libxml2/libxml/xpath.h"
@@ -5307,6 +5393,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -5385,6 +5473,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -5394,8 +5484,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
@@ -5419,6 +5507,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -5428,8 +5518,6 @@ events:
       - "/bin/"
       - "/usr/sbin/"
       - "/sbin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.tbd"
@@ -5440,6 +5528,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -5517,6 +5607,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/"
       - "/opt/homebrew/opt/llvm@15/bin/"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/"
@@ -5531,8 +5623,6 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Users/nithikdeva/development/flutter/bin/"
       - "/Users/nithikdeva/.spicetify/"
       - "/Users/nithikdeva/.pub-cache/bin/"
@@ -5565,6 +5655,7 @@ events:
       - "/opt/local/bin/"
       - "/opt/local/sbin/"
       - "/opt/local/"
+      - "/Users/nithikdeva/Applications/"
       - "/Applications/"
       - "/Applications/Xcode.app/Contents/Applications/"
       - "/Applications/Xcode.app/Contents/Developer/Applications/"
@@ -5575,6 +5666,8 @@ events:
       - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin/xmllint"
       - "/opt/homebrew/opt/llvm@15/bin/xmllint"
       - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin/xmllint"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/xmllint"
+      - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/xmllint"
       - "/opt/homebrew/bin/xmllint"
       - "/opt/homebrew/sbin/xmllint"
       - "/Library/Frameworks/Python.framework/Versions/3.9/bin/xmllint"
@@ -5588,6 +5681,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"
@@ -5628,6 +5723,7 @@ events:
         - "/sw"
         - "/opt/local"
       CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/nithikdeva/Applications"
         - "/Applications"
         - "/Applications/Xcode.app/Contents/Applications"
         - "/Applications/Xcode.app/Contents/Developer/Applications"
@@ -5687,6 +5783,8 @@ events:
         - "/Users/nithikdeva/.nvm/versions/node/v22.20.0/bin"
         - "/opt/homebrew/opt/llvm@15/bin"
         - "/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/bin"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/nithikdeva/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.9/bin"

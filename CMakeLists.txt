@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.13)
 project(rustifyC)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # 1. FIND LLVM
 execute_process(COMMAND brew --prefix llvm@15 OUTPUT_VARIABLE LLVM_PREFIX OUTPUT_STRIP_TRAILING_WHITESPACE)
 set(CMAKE_PREFIX_PATH "${LLVM_PREFIX}/lib/cmake/llvm")

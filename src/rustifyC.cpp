@@ -1,82 +1,124 @@
-#include "llvm/Pass.h"
+#include "llvm/Analysis/ScalarEvolution.h"
+#include "llvm/IR/Constants.h"
+#include "llvm/IR/DebugInfoMetadata.h"
 #include "llvm/IR/Function.h"
-#include "llvm/Support/raw_ostream.h"
-#include "llvm/Passes/PassBuilder.h"
-#include "llvm/Passes/PassPlugin.h"
+#include "llvm/IR/IRBuilder.h"
 #include "llvm/IR/Instructions.h"
 #include "llvm/IR/Type.h"
-#include "llvm/IR/Constants.h"
-#include "llvm/IR/IRBuilder.h" // <--- CRITICAL FOR INJECTING CODE
+#include "llvm/Pass.h"
+#include "llvm/Passes/PassBuilder.h"
+#include "llvm/Passes/PassPlugin.h"
+#include "llvm/Support/raw_ostream.h"
 
 using namespace llvm;
 
 namespace {
 
 struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
-  
-  PreservedAnalyses run(Function &F, FunctionAnalysisManager &FAM) {
-    bool Modified = false; // Track if we changed anything
-    
-    // We collect GEPs first to avoid iterator invalidation issues
-    std::vector<GetElementPtrInst*> Worklist;
 
+  PreservedAnalyses run(Function &F, FunctionAnalysisManager &FAM) {
+    bool Modified = false;
+    std::vector<GetElementPtrInst *> Worklist;
+
+    // Get Scalar Evolution for the current function
+    ScalarEvolution &SE = FAM.getResult<ScalarEvolutionAnalysis>(F);
+
+    // --- PHASE 1 & 2: ANALYSIS ---
     for (auto &BB : F) {
       for (auto &I : BB) {
         if (auto *GEP = dyn_cast<GetElementPtrInst>(&I)) {
-            Type *SourceType = GEP->getSourceElementType();
-            if (auto *ArrayTy = dyn_cast<ArrayType>(SourceType)) {
-                // Get the last operand (the index)
-                Value *IndexValue = GEP->getOperand(GEP->getNumOperands() - 1);
-                
-                // Only instrument if it's NOT a constant number
-                if (!isa<ConstantInt>(IndexValue)) {
-                    Worklist.push_back(GEP);
-                }
+          Type *SourceType = GEP->getSourceElementType();
+
+          if (auto *ArrayTy = dyn_cast<ArrayType>(SourceType)) {
+            // Week 6 Constraint: Must be a strict 1D Alloca Array Access
+            if (GEP->getNumOperands() != 3) {
+              continue;
             }
+
+            uint64_t ArraySize = ArrayTy->getNumElements();
+            Value *IndexValue = GEP->getOperand(2);
+
+            std::string LocInfo = "unknown location";
+            if (DILocation *Loc = GEP->getDebugLoc()) {
+              LocInfo = "line " + std::to_string(Loc->getLine());
+            }
+
+            // --- WEEK 5 DELIVERABLE: STATIC OVERFLOW DETECTION ---
+            if (auto *ConstIndex = dyn_cast<ConstantInt>(IndexValue)) {
+              int64_t Idx = ConstIndex->getSExtValue();
+
+              if (Idx < 0 || (uint64_t)Idx >= ArraySize) {
+                errs() << "\n[rustifyC] ❌ CRITICAL ERROR: Static Buffer "
+                          "Overflow Detected!\n";
+                errs() << "    File: " << F.getParent()->getSourceFileName()
+                       << ":" << LocInfo << "\n";
+                errs() << "    Array Size: " << ArraySize
+                       << " | Accessed Index: " << Idx << "\n";
+                errs() << "    Action: Aborting compilation to prevent unsafe "
+                          "binary.\n";
+                report_fatal_error(
+                    "rustifyC: Spatial Safety Violation (Static Analysis)");
+              }
+            }
+            // --- WEEK 6-7 DELIVERABLE: DYNAMIC INSTRUMENTATION ---
+            else {
+              Worklist.push_back(GEP);
+            }
+          }
         }
       }
     }
 
-    if (Worklist.empty()) return PreservedAnalyses::all();
+    if (Worklist.empty())
+      return PreservedAnalyses::all();
 
-    errs() << "[rustifyC] 🛡️ Injecting Runtime Checks for " << Worklist.size() << " accesses in " << F.getName() << "...\n";
-
+    // --- EXECUTION OF WEEKS 6-7 (Runtime Fallback) ---
     for (auto *GEP : Worklist) {
-        LLVMContext &Ctx = F.getContext();
-        uint64_t ArraySize = cast<ArrayType>(GEP->getSourceElementType())->getNumElements();
-        Value *Index = GEP->getOperand(GEP->getNumOperands() - 1);
+      LLVMContext &Ctx = F.getContext();
+      uint64_t ArraySize =
+          cast<ArrayType>(GEP->getSourceElementType())->getNumElements();
+      Value *Index = GEP->getOperand(2);
 
-        // 1. Setup the split
-        BasicBlock *OldBB = GEP->getParent();
-        Instruction *NextInst = GEP->getNextNode(); // Code after the GEP
-        
-        // 2. Create the Fail Block (The Trap)
-        BasicBlock *FailBB = BasicBlock::Create(Ctx, "FailBlock", &F);
-        IRBuilder<> FailBuilder(FailBB);
-        
-        // Declare abort() if not exists
-        FunctionCallee AbortFunc = F.getParent()->getOrInsertFunction("abort", Type::getVoidTy(Ctx));
-        FailBuilder.CreateCall(AbortFunc);
-        FailBuilder.CreateUnreachable();
+      BasicBlock *OldBB = GEP->getParent();
+      BasicBlock *FailBB = BasicBlock::Create(Ctx, "FailBlock", &F);
 
-        // 3. Split the Old Block right before the GEP
-        // OldBB (Start) -> check -> (FailBB OR SafeBB)
-        BasicBlock *SafeBB = OldBB->splitBasicBlock(GEP, "SafeBlock");
-        
-        // 4. Fix the Terminator of OldBB (The split created an unconditional branch, we need a conditional one)
-        Instruction *OldTerminator = OldBB->getTerminator();
-        OldTerminator->eraseFromParent(); // Delete the auto-generated jump
+      // Split the block right AT the GEP instruction.
+      // SafeBB now contains the GEP, the Store, and everything else.
+      // OldBB now ends right before the GEP.
+      BasicBlock *SafeBB = OldBB->splitBasicBlock(GEP, "SafeBlock");
 
-        IRBuilder<> CheckBuilder(OldBB);
-        
-        // 5. Inject the Comparison: if (Index >= Size)
-        Value *SizeVal = ConstantInt::get(Index->getType(), ArraySize);
-        Value *Condition = CheckBuilder.CreateICmpUGE(Index, SizeVal);
+      IRBuilder<> FailBuilder(FailBB);
+      FunctionCallee AbortFunc =
+          F.getParent()->getOrInsertFunction("abort", Type::getVoidTy(Ctx));
+      CallInst *FailCall = FailBuilder.CreateCall(AbortFunc);
+      FailCall->setDoesNotReturn();
+      FailBuilder.CreateUnreachable();
 
-        // 6. Branch
-        CheckBuilder.CreateCondBr(Condition, FailBB, SafeBB);
-        
-        Modified = true;
+      // The splitBasicBlock() automatically adds an unconditional 'br label
+      // %SafeBB' to OldBB. We must remove this unconditional branch to replace
+      // it with our conditional bounds check.
+      Instruction *OldTerminator = OldBB->getTerminator();
+      OldTerminator->eraseFromParent();
+
+      IRBuilder<> CheckBuilder(OldBB);
+
+      Type *Int64Ty = Type::getInt64Ty(Ctx);
+      // Ensure the index is sign-extended to i64 to handle negative array
+      // indices correctly
+      Value *Index64 =
+          CheckBuilder.CreateSExt(Index, Int64Ty, "idx_64_promoted");
+      Value *SizeVal = ConstantInt::get(Int64Ty, ArraySize);
+
+      // Check: if (Index >= ArraySize) goto FailBlock
+      Value *Condition = CheckBuilder.CreateICmpUGE(Index64, SizeVal);
+
+      // Branch to FailBlock if overflow, otherwise go to SafeBlock to execute
+      // the GEP
+      CheckBuilder.CreateCondBr(Condition, FailBB, SafeBB);
+
+      errs() << "[rustifyC] 🛡️ Injected Runtime Check (Size: " << ArraySize
+             << ")\n";
+      Modified = true;
     }
 
     return Modified ? PreservedAnalyses::none() : PreservedAnalyses::all();
@@ -87,17 +129,16 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
 
 extern "C" LLVM_ATTRIBUTE_WEAK ::llvm::PassPluginLibraryInfo
 llvmGetPassPluginInfo() {
-  return {
-    LLVM_PLUGIN_API_VERSION, "rustifyC", LLVM_VERSION_STRING,
-    [](PassBuilder &PB) {
-      PB.registerPipelineParsingCallback(
-        [](StringRef Name, FunctionPassManager &FPM,
-           ArrayRef<PassBuilder::PipelineElement>) {
-          if (Name == "rustifyC") {
-             FPM.addPass(RustifyCPass());
-             return true;
-          }
-          return false;
-        });
-    }};
+  return {LLVM_PLUGIN_API_VERSION, "rustifyC", LLVM_VERSION_STRING,
+          [](PassBuilder &PB) {
+            PB.registerPipelineParsingCallback(
+                [](StringRef Name, FunctionPassManager &FPM,
+                   ArrayRef<PassBuilder::PipelineElement>) {
+                  if (Name == "rustifyC") {
+                    FPM.addPass(RustifyCPass());
+                    return true;
+                  }
+                  return false;
+                });
+          }};
 }

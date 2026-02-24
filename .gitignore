@@ -1,0 +1,10 @@
+build/
+*.ll
+*.dylib
+*.so
+.DS_Store
+exploit
+bypass
+silent
+*_app
+*_legacy
