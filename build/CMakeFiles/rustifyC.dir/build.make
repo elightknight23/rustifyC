@@ -76,15 +76,15 @@ CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o: CMakeFiles/rustifyC.dir/flags.make
 CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o: /Users/nithikdeva/rustifyC/src/rustifyC.cpp
 CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o: CMakeFiles/rustifyC.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nithikdeva/rustifyC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o"
-	/opt/homebrew/opt/llvm@15/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o -MF CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o.d -o CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o -c /Users/nithikdeva/rustifyC/src/rustifyC.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o -MF CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o.d -o CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o -c /Users/nithikdeva/rustifyC/src/rustifyC.cpp
 
 CMakeFiles/rustifyC.dir/src/rustifyC.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rustifyC.dir/src/rustifyC.cpp.i"
-	/opt/homebrew/opt/llvm@15/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nithikdeva/rustifyC/src/rustifyC.cpp > CMakeFiles/rustifyC.dir/src/rustifyC.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nithikdeva/rustifyC/src/rustifyC.cpp > CMakeFiles/rustifyC.dir/src/rustifyC.cpp.i
 
 CMakeFiles/rustifyC.dir/src/rustifyC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rustifyC.dir/src/rustifyC.cpp.s"
-	/opt/homebrew/opt/llvm@15/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nithikdeva/rustifyC/src/rustifyC.cpp -o CMakeFiles/rustifyC.dir/src/rustifyC.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nithikdeva/rustifyC/src/rustifyC.cpp -o CMakeFiles/rustifyC.dir/src/rustifyC.cpp.s
 
 # Object files for target rustifyC
 rustifyC_OBJECTS = \

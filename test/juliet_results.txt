@@ -1,0 +1,3 @@
+Test Case,Expected,Detected,Result
+demo_dynamic.c,UNSAFE,REJECT,TP
+demo_static.c,UNSAFE,REJECT,TP

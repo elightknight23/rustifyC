@@ -1,1 +1,1 @@
-/opt/homebrew/opt/llvm@15/bin/clang++  -arch arm64 -bundle -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib -Wl,-undefined,dynamic_lookup -o rustifyC.so CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o
+/usr/bin/clang++  -arch arm64 -bundle -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib -Wl,-undefined,dynamic_lookup -o rustifyC.so CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o
