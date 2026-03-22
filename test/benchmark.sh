@@ -2,7 +2,7 @@
 # benchmark.sh
 
 BENCHMARKS="matmul quicksort parse"
-ITERATIONS=10
+ITERATIONS=100
 PASS="$(pwd)/build/rustifyC.so"
 
 echo "=== Compiling Benchmarks ==="
@@ -79,29 +79,37 @@ for bench in $BENCHMARKS; do
     clang -O2 $bench.c -o ${bench}_baseline
     
     # Measure execution time
-    echo -n "Measuring baseline... "
     start=$(date +%s.%N)
     for i in $(seq 1 $ITERATIONS); do ./${bench}_baseline >/dev/null; done
     end=$(date +%s.%N)
     baseline_time=$(echo "$end - $start" | bc)
-    
     baseline_size=$(stat -f%z ${bench}_baseline)
     
     # RustifyC
     clang -O2 -fpass-plugin=$PASS $bench.c -w -o ${bench}_rustifyc
     
-    echo -n "Measuring RustifyC... "
     start=$(date +%s.%N)
     for i in $(seq 1 $ITERATIONS); do ./${bench}_rustifyc >/dev/null; done
     end=$(date +%s.%N)
     rustifyc_time=$(echo "$end - $start" | bc)
-    
     rustifyc_size=$(stat -f%z ${bench}_rustifyc)
+    
+    # ASan
+    clang -O2 -fsanitize=address $bench.c -w -o ${bench}_asan
+    
+    start=$(date +%s.%N)
+    for i in $(seq 1 $ITERATIONS); do ./${bench}_asan >/dev/null; done
+    end=$(date +%s.%N)
+    asan_time=$(echo "$end - $start" | bc)
+    asan_size=$(stat -f%z ${bench}_asan)
     
     # Clean output formatting
     echo ""
-    echo "Runtime: Baseline=${baseline_time}s, RustifyC=${rustifyc_time}s"
-    echo "Binary Size: Baseline=${baseline_size} bytes, RustifyC=${rustifyc_size} bytes"
+    printf "%-12s | %-15s | %-15s\n" "Version" "Time (s)" "Size (bytes)"
+    printf "------------------------------------------------\n"
+    printf "%-12s | %-15.3f | %-15d\n" "Baseline" "$baseline_time" "$baseline_size"
+    printf "%-12s | %-15.3f | %-15d\n" "RustifyC" "$rustifyc_time" "$rustifyc_size"
+    printf "%-12s | %-15.3f | %-15d\n" "ASan" "$asan_time" "$asan_size"
     echo ""
     cd ../..
 done

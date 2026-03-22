@@ -103,3 +103,8 @@ echo "Running performance benchmarks (Baseline vs RustifyC)..."
 echo ""
 echo -e "${GREEN}All checks passed! The RustifyC MVP is complete.${NC}"
 rm -rf /tmp/rustifyc_demo
+
+echo "=========================================="
+echo "  PHASE 6: STACK ESCAPE DETECTION"
+echo "=========================================="
+./demo_phase6.sh
