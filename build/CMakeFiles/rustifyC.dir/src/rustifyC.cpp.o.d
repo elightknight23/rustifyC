@@ -940,6 +940,21 @@ CMakeFiles/rustifyC.dir/src/rustifyC.cpp.o: \
   /opt/homebrew/opt/llvm@15/include/llvm/IR/FPEnv.h \
   /opt/homebrew/opt/llvm@15/include/llvm/IR/Intrinsics.h \
   /opt/homebrew/opt/llvm@15/include/llvm/IR/IntrinsicEnums.inc \
+  /opt/homebrew/opt/llvm@15/include/llvm/Analysis/MemorySSA.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/Analysis/AliasAnalysis.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/Analysis/MemoryLocation.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/Analysis/PHITransAddr.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/IR/DerivedUser.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/IR/Dominators.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/ADT/DepthFirstIterator.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/Support/CFGDiff.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/Support/CFGUpdate.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/Support/GenericDomTree.h \
+  /opt/homebrew/opt/llvm@15/include/llvm/Support/GenericDomTreeConstruction.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/deque.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
   /opt/homebrew/opt/llvm@15/include/llvm/Passes/PassBuilder.h \
   /opt/homebrew/opt/llvm@15/include/llvm/Analysis/CGSCCPassManager.h \
   /opt/homebrew/opt/llvm@15/include/llvm/Analysis/LazyCallGraph.h \

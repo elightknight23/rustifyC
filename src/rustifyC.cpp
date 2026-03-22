@@ -6,11 +6,15 @@
 #include "llvm/IR/IRBuilder.h"
 #include "llvm/IR/Instructions.h"
 #include "llvm/IR/Type.h"
+#include "llvm/Analysis/MemorySSA.h"
 #include "llvm/Pass.h"
 #include "llvm/Passes/PassBuilder.h"
 #include "llvm/Passes/PassPlugin.h"
 #include "llvm/Support/raw_ostream.h"
+#include "llvm/IR/PassManager.h"
 #include <string>
+#include <vector>
+#include <algorithm>
 
 using namespace llvm;
 
@@ -26,6 +30,10 @@ STATISTIC(NumDynamicChecks, "Runtime bounds checks injected");
 STATISTIC(NumSafeAccesses, "Provably safe accesses (no instrumentation)");
 STATISTIC(NumNegativeIndices, "Negative indices caught via UGE comparison");
 STATISTIC(NumMultiDimArrays, "Multi-dimensional array accesses instrumented");
+STATISTIC(NumSCEVElided, "Checks elided via SCEV proof");
+STATISTIC(NumUninitChecks, "Uninitialized read checks injected");
+STATISTIC(NumOverflowChecks, "Integer overflow checks injected");
+STATISTIC(NumStackEscapes, "Stack escapes rejected at compile time");
 
 namespace {
 
@@ -35,9 +43,34 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
   PreservedAnalyses run(Function &F, FunctionAnalysisManager &FAM) {
     bool Modified = false;
     std::vector<GetElementPtrInst *> Worklist;
+    std::vector<LoadInst *> UninitLoads;
+    std::vector<BinaryOperator *> Overflows;
 
-    // Get Scalar Evolution for the current function
+    // Get analyses
     ScalarEvolution &SE = FAM.getResult<ScalarEvolutionAnalysis>(F);
+    MemorySSA &MSSA = FAM.getResult<MemorySSAAnalysis>(F).getMSSA();
+
+    auto IsProvablySafe = [&](Value *IndexValue, uint64_t ArraySize) -> bool {
+      if (auto *ConstIndex = dyn_cast<ConstantInt>(IndexValue)) {
+        int64_t Idx = ConstIndex->getSExtValue();
+        return Idx >= 0 && (uint64_t)Idx < ArraySize;
+      }
+
+      // Allow disabling SCEV via environment variable for benchmarking
+      if (std::getenv("DISABLE_SCEV")) {
+        return false;
+      }
+
+      const SCEV *IndexSCEV = SE.getSCEV(IndexValue);
+      ConstantRange Range = SE.getSignedRange(IndexSCEV);
+      unsigned BitWidth = Range.getBitWidth();
+      if (ArraySize == 0 || Range.isFullSet())
+        return false;
+      APInt Zero(BitWidth, 0);
+      APInt Size(BitWidth, ArraySize, false);
+      ConstantRange SafeRange(Zero, Size);
+      return SafeRange.contains(Range);
+    };
 
     // --------------------------------------------------------------------------
     // MODULE 2: Static Analysis (Compile-Time Checks)
@@ -61,24 +94,13 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
             if (GEP->getNumOperands() < 3)
               continue;
 
-            // Iterate over all indices to support multi-dimensional arrays
+            bool NeedsDynamicCheck = false;
             Type *CurrentTy = ArrayTy;
             for (unsigned idx_op = 2; idx_op < GEP->getNumOperands();
                  ++idx_op) {
               if (auto *ArrTy = dyn_cast<ArrayType>(CurrentTy)) {
                 uint64_t ArraySize = ArrTy->getNumElements();
                 Value *IndexValue = GEP->getOperand(idx_op);
-
-                std::string LocInfo = "unknown location";
-                std::string FileName = "unknown file";
-                unsigned LineNo = 0;
-                unsigned ColNo = 0;
-                if (DILocation *Loc = GEP->getDebugLoc()) {
-                  FileName = Loc->getFilename().str();
-                  LineNo = Loc->getLine();
-                  ColNo = Loc->getColumn();
-                  LocInfo = FileName + ":" + std::to_string(LineNo);
-                }
 
                 if (auto *ConstIndex = dyn_cast<ConstantInt>(IndexValue)) {
                   int64_t Idx = ConstIndex->getSExtValue();
@@ -88,8 +110,16 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
                   if (Idx < 0 || (uint64_t)Idx >= ArraySize) {
                     ++NumStaticOverflows;
 
+                    std::string FileName = "unknown file";
+                    unsigned LineNo = 0;
+                    unsigned ColNo = 0;
+                    if (DILocation *Loc = GEP->getDebugLoc()) {
+                      FileName = Loc->getFilename().str();
+                      LineNo = Loc->getLine();
+                      ColNo = Loc->getColumn();
+                    }
+
                     // We print the error out just like the Rust compiler does
-                    // (colors and arrows)
                     errs() << "\033[1;31merror[CWE-121]:\033[0m spatial memory "
                               "safety violation\n";
                     errs() << "  \033[1;34m-->\033[0m " << FileName << ":"
@@ -106,17 +136,18 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
                     errs() << "   = \033[1mnote:\033[0m valid indices are in "
                               "range [0, "
                            << (ArraySize - 1) << "]\n\n";
-
                     errs() << "rustifyC: Spatial Safety Violation (Static "
                               "Analysis)\n";
                   } else {
                     ++NumSafeAccesses;
                   }
                 } else {
-                  // If the index isn't a constant (like a user-input variable),
-                  // we can't check it now. We save it to our worklist to inject
-                  // a runtime check later.
-                  Worklist.push_back(GEP);
+                  // Phase 3: SCEV Optimization
+                  if (IsProvablySafe(IndexValue, ArraySize)) {
+                    ++NumSCEVElided;
+                  } else {
+                    NeedsDynamicCheck = true;
+                  }
                 }
 
                 CurrentTy = ArrTy->getElementType();
@@ -124,12 +155,60 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
                 break; // Not an array type anymore
               }
             }
+            if (NeedsDynamicCheck) {
+              if (std::find(Worklist.begin(), Worklist.end(), GEP) ==
+                  Worklist.end()) {
+                Worklist.push_back(GEP);
+              }
+            }
+          }
+        } else if (auto *Load = dyn_cast<LoadInst>(&I)) {
+          // Phase 4: Uninitialized Read Detection
+          Value *Ptr = Load->getPointerOperand()->stripPointerCasts();
+          if (auto *Alloca = dyn_cast<AllocaInst>(Ptr)) {
+            MemoryAccess *MA = MSSA.getMemoryAccess(Load);
+            if (MA) {
+              MemoryAccess *Clobber = MSSA.getWalker()->getClobberingMemoryAccess(MA);
+              if (MSSA.isLiveOnEntryDef(Clobber)) {
+                // Avoid double counting
+                if (std::find(UninitLoads.begin(), UninitLoads.end(), Load) == UninitLoads.end()) {
+                  UninitLoads.push_back(Load);
+                  ++NumUninitChecks;
+                  
+                  std::string FileName = "unknown file";
+                  unsigned LineNo = 0;
+                  unsigned ColNo = 0;
+                  if (DILocation *Loc = Load->getDebugLoc()) {
+                    FileName = Loc->getFilename().str();
+                    LineNo = Loc->getLine();
+                    ColNo = Loc->getColumn();
+                  }
+
+                  errs() << "\033[1;31merror[E0381]:\033[0m used variable \033[1m'" 
+                         << (Alloca->hasName() ? Alloca->getName() : "unnamed") 
+                         << "'\033[0m is definitely uninitialized\n";
+                  errs() << "  \033[1;34m-->\033[0m " << FileName << ":" << LineNo << ":" << ColNo << "\n";
+                  errs() << "rustifyC: Initialization Safety Violation (Static Analysis)\n\n";
+                }
+              }
+            }
+          }
+        } else if (auto *BinOp = dyn_cast<BinaryOperator>(&I)) {
+          // Phase 5: Integer Overflow Detection
+          if (BinOp->getOpcode() == Instruction::Add ||
+              BinOp->getOpcode() == Instruction::Sub ||
+              BinOp->getOpcode() == Instruction::Mul) {
+              if (BinOp->getType()->isIntegerTy()) {
+                  if (std::find(Overflows.begin(), Overflows.end(), BinOp) == Overflows.end()) {
+                      Overflows.push_back(BinOp);
+                  }
+              }
           }
         }
       }
     }
 
-    if (Worklist.empty())
+    if (Worklist.empty() && UninitLoads.empty() && Overflows.empty())
       return PreservedAnalyses::all();
 
     // --------------------------------------------------------------------------
@@ -152,7 +231,7 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
       Type *CurrentTy = ArrayTy;
       for (unsigned i = 2; i < GEP->getNumOperands(); ++i) {
         if (auto *ArrTy = dyn_cast<ArrayType>(CurrentTy)) {
-          if (!isa<ConstantInt>(GEP->getOperand(i))) {
+          if (!IsProvablySafe(GEP->getOperand(i), ArrTy->getNumElements())) {
             ArraySize = ArrTy->getNumElements();
             Index = GEP->getOperand(i);
             break;
@@ -254,6 +333,101 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
       Modified = true;
     }
 
+    // --------------------------------------------------------------------------
+    // MODULE 4b: Uninitialized Memory Panic Injection
+    // --------------------------------------------------------------------------
+    for (auto *Load : UninitLoads) {
+      LLVMContext &Ctx = F.getContext();
+      BasicBlock *OldBB = Load->getParent();
+      BasicBlock *FailBB = BasicBlock::Create(Ctx, "UninitFailBlock", &F);
+      BasicBlock *SafeBB = OldBB->splitBasicBlock(Load, "UninitSafeBlock");
+
+      IRBuilder<> FailBuilder(FailBB);
+
+      std::string FileName = "unknown_file";
+      unsigned LineNo = 0;
+      if (DILocation *Loc = Load->getDebugLoc()) {
+        FileName = Loc->getFilename().str();
+        LineNo = Loc->getLine();
+      }
+
+      std::string FmtStr = "thread 'main' panicked at 'uninitialized variable read', " + FileName + ":" + std::to_string(LineNo) + "\n";
+      Constant *FmtConst = ConstantDataArray::getString(Ctx, FmtStr);
+      GlobalVariable *FmtGlobal = new GlobalVariable(*F.getParent(), FmtConst->getType(), true, GlobalValue::PrivateLinkage, FmtConst, ".rustifyc.uninit.fmt");
+
+      FunctionType *PrintfTy = FunctionType::get(FailBuilder.getInt32Ty(), {FailBuilder.getInt8PtrTy()}, true);
+      FunctionCallee Printf = F.getParent()->getOrInsertFunction("printf", PrintfTy);
+      Value *Fmt = FailBuilder.CreateBitCast(FmtGlobal, FailBuilder.getInt8PtrTy());
+      FailBuilder.CreateCall(Printf, {Fmt});
+
+      FunctionCallee ExitFunc = F.getParent()->getOrInsertFunction("exit", FunctionType::get(FailBuilder.getVoidTy(), {FailBuilder.getInt32Ty()}, false));
+      FailBuilder.CreateCall(ExitFunc, {FailBuilder.getInt32(101)});
+      FailBuilder.CreateUnreachable();
+
+      Instruction *OldTerminator = OldBB->getTerminator();
+      OldTerminator->eraseFromParent();
+      IRBuilder<> CheckBuilder(OldBB);
+
+      // Definitely uninitialized: unconditionally crash at runtime if we reach here!
+      CheckBuilder.CreateBr(FailBB);
+      Modified = true;
+    }
+
+    // --------------------------------------------------------------------------
+    // MODULE 5: Integer Overflow Panic Injection
+    // --------------------------------------------------------------------------
+    for (auto *BinOp : Overflows) {
+      LLVMContext &Ctx = F.getContext();
+      BasicBlock *OldBB = BinOp->getParent();
+      BasicBlock *FailBB = BasicBlock::Create(Ctx, "OverflowFailBlock", &F);
+      BasicBlock *SafeBB = OldBB->splitBasicBlock(BinOp, "OverflowSafeBlock");
+
+      Instruction *OldTerminator = OldBB->getTerminator();
+      OldTerminator->eraseFromParent();
+      
+      IRBuilder<> CheckBuilder(OldBB);
+
+      Intrinsic::ID IntId;
+      if (BinOp->getOpcode() == Instruction::Add) IntId = Intrinsic::sadd_with_overflow;
+      else if (BinOp->getOpcode() == Instruction::Sub) IntId = Intrinsic::ssub_with_overflow;
+      else IntId = Intrinsic::smul_with_overflow;
+
+      Function *OverflowFn = Intrinsic::getDeclaration(F.getParent(), IntId, {BinOp->getType()});
+      CallInst *Call = CheckBuilder.CreateCall(OverflowFn, {BinOp->getOperand(0), BinOp->getOperand(1)});
+      
+      Value *Result = CheckBuilder.CreateExtractValue(Call, 0);
+      Value *DidOverflow = CheckBuilder.CreateExtractValue(Call, 1);
+
+      BinOp->replaceAllUsesWith(Result);
+      BinOp->eraseFromParent();
+
+      CheckBuilder.CreateCondBr(DidOverflow, FailBB, SafeBB);
+
+      // Build FailBB
+      IRBuilder<> FailBuilder(FailBB);
+      std::string FileName = "unknown_file";
+      unsigned LineNo = 0;
+      if (DILocation *Loc = Call->getDebugLoc()) {
+        FileName = Loc->getFilename().str();
+        LineNo = Loc->getLine();
+      }
+
+      std::string FmtStr = "thread 'main' panicked at 'arithmetic operation overflowed', " + FileName + ":" + std::to_string(LineNo) + "\n";
+      Constant *FmtConst = ConstantDataArray::getString(Ctx, FmtStr);
+      GlobalVariable *FmtGlobal = new GlobalVariable(*F.getParent(), FmtConst->getType(), true, GlobalValue::PrivateLinkage, FmtConst, ".rustifyc.overflow.fmt");
+
+      FunctionType *PrintfTy = FunctionType::get(FailBuilder.getInt32Ty(), {FailBuilder.getInt8PtrTy()}, true);
+      FunctionCallee Printf = F.getParent()->getOrInsertFunction("printf", PrintfTy);
+      Value *Fmt = FailBuilder.CreateBitCast(FmtGlobal, FailBuilder.getInt8PtrTy());
+      FailBuilder.CreateCall(Printf, {Fmt});
+
+      FunctionCallee ExitFunc = F.getParent()->getOrInsertFunction("exit", FunctionType::get(FailBuilder.getVoidTy(), {FailBuilder.getInt32Ty()}, false));
+      FailBuilder.CreateCall(ExitFunc, {FailBuilder.getInt32(101)});
+      FailBuilder.CreateUnreachable();
+
+      Modified = true;
+    }
+
     return Modified ? PreservedAnalyses::none() : PreservedAnalyses::all();
   }
 };
@@ -279,8 +453,23 @@ struct RustifyCPrinter : public PassInfoMixin<RustifyCPrinter> {
              << NumNegativeIndices << "\n";
       errs() << "  \033[32m✓\033[0m Multi-dimensional arrays secured:   "
              << NumMultiDimArrays << "\n";
+      errs() << "  \033[32m✓\033[0m SCEV proofs elided checks:        "
+             << NumSCEVElided << "\n";
+             
+      if (NumUninitChecks > 0) {
+        errs() << "Initialization Safety Analysis:\n";
+        errs() << "  \033[32m✓\033[0m Uninitialized reads prevented:      "
+               << NumUninitChecks << "\n";
+      }
 
-      uint64_t total = NumStaticOverflows + NumDynamicChecks + NumSafeAccesses;
+      if (NumOverflowChecks > 0) {
+        errs() << "Arithmetic Overflow Analysis:\n";
+        errs() << "  \033[32m✓\033[0m Overflow checks injected:           "
+               << NumOverflowChecks << "\n";
+      }
+
+      uint64_t total = NumStaticOverflows + NumDynamicChecks + NumSafeAccesses +
+                       NumSCEVElided + NumUninitChecks + NumOverflowChecks;
       if (total > 0) {
         float instr_rate = (float)NumDynamicChecks / total * 100.0f;
         errs()
@@ -313,17 +502,21 @@ llvmGetPassPluginInfo() {
                   }
                   return false;
                 });
+            PB.registerVectorizerStartEPCallback(
+                [](FunctionPassManager &FPM, OptimizationLevel Level) {
+                  FPM.addPass(RustifyCPass());
+                });
+
             PB.registerOptimizerLastEPCallback(
-                [](ModulePassManager &MPM, OptimizationLevel) {});
+                [](ModulePassManager &MPM, OptimizationLevel Level) {
+                  MPM.addPass(RustifyCPrinter());
+                });
 
             // We force execution at the very start of the pipeline
             // so we don't accidentally get optimized away by -O0
-            PB.registerPipelineStartEPCallback([](ModulePassManager &MPM,
-                                                  OptimizationLevel Level) {
-              FunctionPassManager FPM;
-              FPM.addPass(RustifyCPass());
-              MPM.addPass(createModuleToFunctionPassAdaptor(std::move(FPM)));
-              MPM.addPass(RustifyCPrinter());
-            });
+            PB.registerPipelineStartEPCallback(
+                [](ModulePassManager &MPM, OptimizationLevel Level) {
+                  // Now handled by OptimizerLastEP so mem2reg can run first!
+                });
           }};
 }
