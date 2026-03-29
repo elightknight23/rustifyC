@@ -1,8 +1,32 @@
+## Build artifacts
 build/
-*.ll
-*.dylib
 *.so
+*.dylib
+*.o
+*.d
+
+## Compiled demo/test binaries (no extension = executable on macOS)
+demo_safe
+demo_unsafe
+demo_exploit
+test_exploit_safe
+test_exploit_unsafe
+secure_binary
+secure_dynamic
+secure_scev
+secure_static
+test3
+
+## Debug symbols
+*.dSYM/
+
+## Clang / LSP cache
+.cache/
+
+## macOS
 .DS_Store
+
+## Misc legacy patterns
 exploit
 bypass
 silent

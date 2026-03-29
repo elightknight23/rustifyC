@@ -1,20 +1,20 @@
 #include "llvm/ADT/Statistic.h"
+#include "llvm/Analysis/MemorySSA.h"
 #include "llvm/Analysis/ScalarEvolution.h"
 #include "llvm/IR/Constants.h"
 #include "llvm/IR/DebugInfoMetadata.h"
 #include "llvm/IR/Function.h"
 #include "llvm/IR/IRBuilder.h"
 #include "llvm/IR/Instructions.h"
+#include "llvm/IR/PassManager.h"
 #include "llvm/IR/Type.h"
-#include "llvm/Analysis/MemorySSA.h"
 #include "llvm/Pass.h"
 #include "llvm/Passes/PassBuilder.h"
 #include "llvm/Passes/PassPlugin.h"
 #include "llvm/Support/raw_ostream.h"
-#include "llvm/IR/PassManager.h"
+#include <algorithm>
 #include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace llvm;
 
@@ -39,113 +39,139 @@ namespace {
 
 // Recursive function to trace pointer uses through BitCasts and GEPs
 // Returns true if the pointer escapes the function scope
-bool doesValueEscape(Value *V, Instruction *&EscapePoint, std::string &EscapeReason, int &Kind, int Depth = 0) {
-    if (Depth > 5) return false; // Bound recursion
-    for (User *U : V->users()) {
-        if (auto *Ret = dyn_cast<ReturnInst>(U)) {
-            Kind = 0; // ESCAPE_RETURN
-            EscapeReason = "returned from function";
-            EscapePoint = Ret;
-            return true;
-        }
-        if (auto *Store = dyn_cast<StoreInst>(U)) {
-            // Is the address being stored? If so, it escapes wherever it's stored to.
-            if (Store->getValueOperand() == V || Store->getValueOperand()->stripPointerCasts() == V->stripPointerCasts()) {
-                Value *Dest = Store->getPointerOperand()->stripPointerCasts();
-                if (isa<GlobalVariable>(Dest)) {
-                    Kind = 1; // ESCAPE_GLOBAL
-                    EscapeReason = "stored to global variable";
-                    EscapePoint = Store;
-                    return true;
-                }
-                // If storing to an address that is NOT a local alloca, we assume it escapes (heap or external pointer argument)
-                if (!isa<AllocaInst>(Dest)) {
-                    Kind = 3; // ESCAPE_HEAP
-                    EscapeReason = "stored to heap or external pointer";
-                    EscapePoint = Store;
-                    return true;
-                }
-            }
-        }
-        if (auto *Call = dyn_cast<CallInst>(U)) {
-            Function *Callee = Call->getCalledFunction();
-            if (!Callee || Callee->isDeclaration()) {
-                if (Callee) {
-                    StringRef Name = Callee->getName();
-                    if (Name == "printf" || Name == "fprintf" || Name == "sprintf" ||
-                        Name == "snprintf" || Name == "memcpy" || Name == "memmove" ||
-                        Name == "memset" || Name == "strlen" || Name.startswith("llvm.")) {
-                        continue; // Safe external calls that don't capture pointers out of scope
-                    }
-                }
-                Kind = 2; // ESCAPE_EXTERNAL
-                EscapeReason = "passed to external function";
-                EscapePoint = Call;
-                return true;
-            }
-        }
-        if (isa<BitCastInst>(U) || isa<GetElementPtrInst>(U)) {
-            if (doesValueEscape(cast<Instruction>(U), EscapePoint, EscapeReason, Kind, Depth + 1)) {
-                return true;
-            }
-        }
+bool doesValueEscape(Value *V, Instruction *&EscapePoint,
+                     std::string &EscapeReason, int &Kind, int Depth = 0) {
+  if (Depth > 5)
+    return false; // Bound recursion
+  for (User *U : V->users()) {
+    if (auto *Ret = dyn_cast<ReturnInst>(U)) {
+      Kind = 0; // ESCAPE_RETURN
+      EscapeReason = "returned from function";
+      EscapePoint = Ret;
+      return true;
     }
-    return false;
+    if (auto *Store = dyn_cast<StoreInst>(U)) {
+      // Is the address being stored? If so, it escapes wherever it's stored to.
+      if (Store->getValueOperand() == V ||
+          Store->getValueOperand()->stripPointerCasts() ==
+              V->stripPointerCasts()) {
+        Value *Dest = Store->getPointerOperand()->stripPointerCasts();
+        if (isa<GlobalVariable>(Dest)) {
+          Kind = 1; // ESCAPE_GLOBAL
+          EscapeReason = "stored to global variable";
+          EscapePoint = Store;
+          return true;
+        }
+        // If storing to an address that is NOT a local alloca, we assume it
+        // escapes (heap or external pointer argument)
+        if (!isa<AllocaInst>(Dest)) {
+          Kind = 3; // ESCAPE_HEAP
+          EscapeReason = "stored to heap or external pointer";
+          EscapePoint = Store;
+          return true;
+        }
+      }
+    }
+    if (auto *Call = dyn_cast<CallInst>(U)) {
+      Function *Callee = Call->getCalledFunction();
+      if (!Callee || Callee->isDeclaration()) {
+        if (Callee) {
+          StringRef Name = Callee->getName();
+          if (Name == "printf" || Name == "fprintf" || Name == "sprintf" ||
+              Name == "snprintf" || Name == "memcpy" || Name == "memmove" ||
+              Name == "memset" || Name == "strlen" ||
+              Name.startswith("llvm.")) {
+            continue; // Safe external calls that don't capture pointers out of
+                      // scope
+          }
+        }
+        Kind = 2; // ESCAPE_EXTERNAL
+        EscapeReason = "passed to external function";
+        EscapePoint = Call;
+        return true;
+      }
+    }
+    if (isa<BitCastInst>(U) || isa<GetElementPtrInst>(U)) {
+      if (doesValueEscape(cast<Instruction>(U), EscapePoint, EscapeReason, Kind,
+                          Depth + 1)) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 void detectStackEscape(AllocaInst *Alloca, Function &F) {
-    DILocation *Loc = Alloca->getDebugLoc();
-    std::string EscapeReason;
-    int Kind = -1;
-    Instruction *EscapePoint = nullptr;
+  DILocation *Loc = Alloca->getDebugLoc();
+  std::string EscapeReason;
+  int Kind = -1;
+  Instruction *EscapePoint = nullptr;
 
-    if (doesValueEscape(Alloca, EscapePoint, EscapeReason, Kind)) {
-        ++NumStackEscapes;
-        DILocation *EscapeLoc = EscapePoint ? EscapePoint->getDebugLoc() : nullptr;
-        if (!Loc && EscapeLoc) Loc = EscapeLoc; // Fallback to escape point location
-        
-        StringRef Filename = Loc ? Loc->getFilename() : "unknown_file";
-        unsigned Line = Loc ? Loc->getLine() : 0;
-        unsigned Column = Loc ? Loc->getColumn() : 0;
+  if (doesValueEscape(Alloca, EscapePoint, EscapeReason, Kind)) {
+    ++NumStackEscapes;
+    DILocation *EscapeLoc = EscapePoint ? EscapePoint->getDebugLoc() : nullptr;
+    if (!Loc && EscapeLoc)
+      Loc = EscapeLoc; // Fallback to escape point location
 
-        errs() << "\033[1;31merror[E0597]:\033[0m stack variable escapes function scope\n";
-        errs() << "  \033[1;34m-->\033[0m " << Filename << ":" << Line << ":" << Column << "\n";
-        errs() << "   |\n";
+    StringRef Filename = Loc ? Loc->getFilename() : "unknown_file";
+    unsigned Line = Loc ? Loc->getLine() : 0;
+    unsigned Column = Loc ? Loc->getColumn() : 0;
 
-        if (Loc) {
-            errs() << llvm::format_decimal(Line, 4) << " |     ";
-            if (auto *DVI = dyn_cast_or_null<DbgVariableIntrinsic>(Alloca->getNextNode())) {
-                if (DILocalVariable *Var = DVI->getVariable()) errs() << Var->getName() << "\n";
-            } else {
-                errs() << "<local variable>\n";
-            }
-        }
+    errs() << "\033[1;31merror[E0597]:\033[0m stack variable escapes function "
+              "scope\n";
+    errs() << "  \033[1;34m-->\033[0m " << Filename << ":" << Line << ":"
+           << Column << "\n";
+    errs() << "   |\n";
 
-        if (EscapeLoc) {
-            unsigned EscapeLine = EscapeLoc->getLine();
-            if (EscapeLine != Line) {
-                errs() << llvm::format_decimal(EscapeLine, 4) << " |     ";
-                errs() << "<escape point>\n";
-                errs() << "   |     ";
-            } else {
-                errs() << "   |     ";
-            }
-            std::string Pointer(15, '^');
-            errs() << Pointer << " " << EscapeReason << "\n";
-        }
-        errs() << "   |\n   = \033[1mnote:\033[0m borrowed value does not live long enough\n";
-
-        switch (Kind) {
-            case 0: errs() << "   = \033[1mhelp:\033[0m consider using heap allocation (malloc) or passing by value\n"; break;
-            case 1: errs() << "   = \033[1mhelp:\033[0m stack variables cannot outlive their function\n"; break;
-            case 2: errs() << "   = \033[1mhelp:\033[0m external functions may store the pointer beyond function lifetime\n"; break;
-            case 3: errs() << "   = \033[1mhelp:\033[0m storing stack addresses to heap creates dangling pointers\n"; break;
-        }
-        errs() << "\n";
-        // Exit Compilation for MVP
-        errs() << "rustifyC: Temporal Safety Violation (Stack Escape Analysis)\n";
-        exit(1);
+    if (Loc) {
+      errs() << llvm::format_decimal(Line, 4) << " |     ";
+      if (auto *DVI =
+              dyn_cast_or_null<DbgVariableIntrinsic>(Alloca->getNextNode())) {
+        if (DILocalVariable *Var = DVI->getVariable())
+          errs() << Var->getName() << "\n";
+      } else {
+        errs() << "<local variable>\n";
+      }
     }
+
+    if (EscapeLoc) {
+      unsigned EscapeLine = EscapeLoc->getLine();
+      if (EscapeLine != Line) {
+        errs() << llvm::format_decimal(EscapeLine, 4) << " |     ";
+        errs() << "<escape point>\n";
+        errs() << "   |     ";
+      } else {
+        errs() << "   |     ";
+      }
+      std::string Pointer(15, '^');
+      errs() << Pointer << " " << EscapeReason << "\n";
+    }
+    errs() << "   |\n   = \033[1mnote:\033[0m borrowed value does not live "
+              "long enough\n";
+
+    switch (Kind) {
+    case 0:
+      errs() << "   = \033[1mhelp:\033[0m consider using heap allocation "
+                "(malloc) or passing by value\n";
+      break;
+    case 1:
+      errs() << "   = \033[1mhelp:\033[0m stack variables cannot outlive their "
+                "function\n";
+      break;
+    case 2:
+      errs() << "   = \033[1mhelp:\033[0m external functions may store the "
+                "pointer beyond function lifetime\n";
+      break;
+    case 3:
+      errs() << "   = \033[1mhelp:\033[0m storing stack addresses to heap "
+                "creates dangling pointers\n";
+      break;
+    }
+    errs() << "\n";
+    // Exit Compilation for MVP
+    errs() << "rustifyC: Temporal Safety Violation (Stack Escape Analysis)\n";
+    exit(1);
+  }
 }
 
 struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
@@ -187,7 +213,7 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
     // MODULE 2: Static Analysis (Compile-Time Checks)
     // Here we iterate through every instruction in the function looking for
     // memory accesses (GetElementPtr or GEP). If it's an array and the index
-    // is a hardcoded constant, we can check it right now at compile time!
+    // is a hardcoded constant, we can check it right now at compile time
     // --------------------------------------------------------------------------
     for (auto &BB : F) {
       for (auto &I : BB) {
@@ -279,11 +305,12 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
           if (auto *Alloca = dyn_cast<AllocaInst>(Ptr)) {
             MemoryAccess *MA = MSSA.getMemoryAccess(Load);
             if (MA) {
-              MemoryAccess *Clobber = MSSA.getWalker()->getClobberingMemoryAccess(MA);
-              
+              MemoryAccess *Clobber =
+                  MSSA.getWalker()->getClobberingMemoryAccess(MA);
+
               bool IsUninit = MSSA.isLiveOnEntryDef(Clobber);
               bool IsPossiblyUninit = false;
-              
+
               if (auto *Phi = dyn_cast<MemoryPhi>(Clobber)) {
                 for (unsigned i = 0; i < Phi->getNumIncomingValues(); ++i) {
                   if (MSSA.isLiveOnEntryDef(Phi->getIncomingValue(i))) {
@@ -295,10 +322,11 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
 
               if (IsUninit || IsPossiblyUninit) {
                 // Avoid double counting
-                if (std::find(UninitLoads.begin(), UninitLoads.end(), Load) == UninitLoads.end()) {
+                if (std::find(UninitLoads.begin(), UninitLoads.end(), Load) ==
+                    UninitLoads.end()) {
                   UninitLoads.push_back(Load);
                   ++NumUninitChecks;
-                  
+
                   std::string FileName = "unknown file";
                   unsigned LineNo = 0;
                   unsigned ColNo = 0;
@@ -308,11 +336,16 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
                     ColNo = Loc->getColumn();
                   }
 
-                  errs() << "\033[1;31merror[E0381]:\033[0m used variable \033[1m'" 
-                         << (Alloca->hasName() ? Alloca->getName() : "unnamed") 
-                         << "'\033[0m is " << (IsPossiblyUninit ? "possibly" : "definitely") << " uninitialized\n";
-                  errs() << "  \033[1;34m-->\033[0m " << FileName << ":" << LineNo << ":" << ColNo << "\n";
-                  errs() << "rustifyC: Initialization Safety Violation (Static Analysis)\n\n";
+                  errs()
+                      << "\033[1;31merror[E0381]:\033[0m used variable \033[1m'"
+                      << (Alloca->hasName() ? Alloca->getName() : "unnamed")
+                      << "'\033[0m is "
+                      << (IsPossiblyUninit ? "possibly" : "definitely")
+                      << " uninitialized\n";
+                  errs() << "  \033[1;34m-->\033[0m " << FileName << ":"
+                         << LineNo << ":" << ColNo << "\n";
+                  errs() << "rustifyC: Initialization Safety Violation (Static "
+                            "Analysis)\n\n";
                 }
               }
             }
@@ -322,18 +355,19 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
           if (BinOp->getOpcode() == Instruction::Add ||
               BinOp->getOpcode() == Instruction::Sub ||
               BinOp->getOpcode() == Instruction::Mul) {
-              if (BinOp->getType()->isIntegerTy()) {
-                  if (std::find(Overflows.begin(), Overflows.end(), BinOp) == Overflows.end()) {
-                      Overflows.push_back(BinOp);
-                  }
+            if (BinOp->getType()->isIntegerTy()) {
+              if (std::find(Overflows.begin(), Overflows.end(), BinOp) ==
+                  Overflows.end()) {
+                Overflows.push_back(BinOp);
               }
+            }
           }
         }
-        
+
         if (auto *Alloca = dyn_cast<AllocaInst>(&I)) {
           // Phase 6: Stack Escape Detection
           if (!Alloca->getAllocatedType()->isArrayTy()) {
-             detectStackEscape(Alloca, F);
+            detectStackEscape(Alloca, F);
           }
         }
       }
@@ -482,16 +516,25 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
         LineNo = Loc->getLine();
       }
 
-      std::string FmtStr = "thread 'main' panicked at 'uninitialized variable read', " + FileName + ":" + std::to_string(LineNo) + "\n";
+      std::string FmtStr =
+          "thread 'main' panicked at 'uninitialized variable read', " +
+          FileName + ":" + std::to_string(LineNo) + "\n";
       Constant *FmtConst = ConstantDataArray::getString(Ctx, FmtStr);
-      GlobalVariable *FmtGlobal = new GlobalVariable(*F.getParent(), FmtConst->getType(), true, GlobalValue::PrivateLinkage, FmtConst, ".rustifyc.uninit.fmt");
+      GlobalVariable *FmtGlobal = new GlobalVariable(
+          *F.getParent(), FmtConst->getType(), true,
+          GlobalValue::PrivateLinkage, FmtConst, ".rustifyc.uninit.fmt");
 
-      FunctionType *PrintfTy = FunctionType::get(FailBuilder.getInt32Ty(), {FailBuilder.getInt8PtrTy()}, true);
-      FunctionCallee Printf = F.getParent()->getOrInsertFunction("printf", PrintfTy);
-      Value *Fmt = FailBuilder.CreateBitCast(FmtGlobal, FailBuilder.getInt8PtrTy());
+      FunctionType *PrintfTy = FunctionType::get(
+          FailBuilder.getInt32Ty(), {FailBuilder.getInt8PtrTy()}, true);
+      FunctionCallee Printf =
+          F.getParent()->getOrInsertFunction("printf", PrintfTy);
+      Value *Fmt =
+          FailBuilder.CreateBitCast(FmtGlobal, FailBuilder.getInt8PtrTy());
       FailBuilder.CreateCall(Printf, {Fmt});
 
-      FunctionCallee ExitFunc = F.getParent()->getOrInsertFunction("exit", FunctionType::get(FailBuilder.getVoidTy(), {FailBuilder.getInt32Ty()}, false));
+      FunctionCallee ExitFunc = F.getParent()->getOrInsertFunction(
+          "exit", FunctionType::get(FailBuilder.getVoidTy(),
+                                    {FailBuilder.getInt32Ty()}, false));
       FailBuilder.CreateCall(ExitFunc, {FailBuilder.getInt32(101)});
       FailBuilder.CreateUnreachable();
 
@@ -499,7 +542,8 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
       OldTerminator->eraseFromParent();
       IRBuilder<> CheckBuilder(OldBB);
 
-      // Definitely uninitialized: unconditionally crash at runtime if we reach here!
+      // Definitely uninitialized: unconditionally crash at runtime if we reach
+      // here!
       CheckBuilder.CreateBr(FailBB);
       Modified = true;
     }
@@ -515,17 +559,22 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
 
       Instruction *OldTerminator = OldBB->getTerminator();
       OldTerminator->eraseFromParent();
-      
+
       IRBuilder<> CheckBuilder(OldBB);
 
       Intrinsic::ID IntId;
-      if (BinOp->getOpcode() == Instruction::Add) IntId = Intrinsic::sadd_with_overflow;
-      else if (BinOp->getOpcode() == Instruction::Sub) IntId = Intrinsic::ssub_with_overflow;
-      else IntId = Intrinsic::smul_with_overflow;
+      if (BinOp->getOpcode() == Instruction::Add)
+        IntId = Intrinsic::sadd_with_overflow;
+      else if (BinOp->getOpcode() == Instruction::Sub)
+        IntId = Intrinsic::ssub_with_overflow;
+      else
+        IntId = Intrinsic::smul_with_overflow;
 
-      Function *OverflowFn = Intrinsic::getDeclaration(F.getParent(), IntId, {BinOp->getType()});
-      CallInst *Call = CheckBuilder.CreateCall(OverflowFn, {BinOp->getOperand(0), BinOp->getOperand(1)});
-      
+      Function *OverflowFn =
+          Intrinsic::getDeclaration(F.getParent(), IntId, {BinOp->getType()});
+      CallInst *Call = CheckBuilder.CreateCall(
+          OverflowFn, {BinOp->getOperand(0), BinOp->getOperand(1)});
+
       Value *Result = CheckBuilder.CreateExtractValue(Call, 0);
       Value *DidOverflow = CheckBuilder.CreateExtractValue(Call, 1);
 
@@ -543,16 +592,25 @@ struct RustifyCPass : public PassInfoMixin<RustifyCPass> {
         LineNo = Loc->getLine();
       }
 
-      std::string FmtStr = "thread 'main' panicked at 'arithmetic operation overflowed', " + FileName + ":" + std::to_string(LineNo) + "\n";
+      std::string FmtStr =
+          "thread 'main' panicked at 'arithmetic operation overflowed', " +
+          FileName + ":" + std::to_string(LineNo) + "\n";
       Constant *FmtConst = ConstantDataArray::getString(Ctx, FmtStr);
-      GlobalVariable *FmtGlobal = new GlobalVariable(*F.getParent(), FmtConst->getType(), true, GlobalValue::PrivateLinkage, FmtConst, ".rustifyc.overflow.fmt");
+      GlobalVariable *FmtGlobal = new GlobalVariable(
+          *F.getParent(), FmtConst->getType(), true,
+          GlobalValue::PrivateLinkage, FmtConst, ".rustifyc.overflow.fmt");
 
-      FunctionType *PrintfTy = FunctionType::get(FailBuilder.getInt32Ty(), {FailBuilder.getInt8PtrTy()}, true);
-      FunctionCallee Printf = F.getParent()->getOrInsertFunction("printf", PrintfTy);
-      Value *Fmt = FailBuilder.CreateBitCast(FmtGlobal, FailBuilder.getInt8PtrTy());
+      FunctionType *PrintfTy = FunctionType::get(
+          FailBuilder.getInt32Ty(), {FailBuilder.getInt8PtrTy()}, true);
+      FunctionCallee Printf =
+          F.getParent()->getOrInsertFunction("printf", PrintfTy);
+      Value *Fmt =
+          FailBuilder.CreateBitCast(FmtGlobal, FailBuilder.getInt8PtrTy());
       FailBuilder.CreateCall(Printf, {Fmt});
 
-      FunctionCallee ExitFunc = F.getParent()->getOrInsertFunction("exit", FunctionType::get(FailBuilder.getVoidTy(), {FailBuilder.getInt32Ty()}, false));
+      FunctionCallee ExitFunc = F.getParent()->getOrInsertFunction(
+          "exit", FunctionType::get(FailBuilder.getVoidTy(),
+                                    {FailBuilder.getInt32Ty()}, false));
       FailBuilder.CreateCall(ExitFunc, {FailBuilder.getInt32(101)});
       FailBuilder.CreateUnreachable();
 
@@ -586,7 +644,7 @@ struct RustifyCPrinter : public PassInfoMixin<RustifyCPrinter> {
              << NumMultiDimArrays << "\n";
       errs() << "  \033[32m✓\033[0m SCEV proofs elided checks:        "
              << NumSCEVElided << "\n";
-             
+
       if (NumUninitChecks > 0) {
         errs() << "Initialization Safety Analysis:\n";
         errs() << "  \033[32m✓\033[0m Uninitialized reads prevented:      "
@@ -604,7 +662,8 @@ struct RustifyCPrinter : public PassInfoMixin<RustifyCPrinter> {
       }
 
       uint64_t total = NumStaticOverflows + NumDynamicChecks + NumSafeAccesses +
-                       NumSCEVElided + NumUninitChecks + NumOverflowChecks + NumStackEscapes;
+                       NumSCEVElided + NumUninitChecks + NumOverflowChecks +
+                       NumStackEscapes;
       if (total > 0) {
         float instr_rate = (float)NumDynamicChecks / total * 100.0f;
         errs()
