@@ -109,19 +109,27 @@ error[E0597]: stack variable escapes function scope
 
 ## 📊 Test Results
 
-Validated against a **152-test suite** (NIST Juliet CWE-121 inspired + generated edge cases):
+Validated against the internal Juliet-inspired test suite (`test/CWE121/`, 152 targeted cases) and a broader cross-tool comparison (`test/compare_clang.sh`, 184 cases):
+
+### Targeted Test Suite (152 cases — patterns RustifyC is designed for)
 
 | Metric | Result |
 |---|---|
 | True Positives (unsafe code caught) | 76 |
 | True Negatives (safe code passed) | 75 |
-| False Positives | 0 |
+| False Positives | **0** |
 | False Negatives | 1 |
-| **Accuracy** | **99.3%** |
 | **Precision** | **100%** |
-| **Recall** | **98.7%** |
+| **Recall** | 98.7% |
 
-> The single false negative is of a conditional-initialization case, this is a known limitation when optimization passes simplify MemoryPhi nodes.
+### Cross-Tool Comparison (184 cases — all vulnerability types)
+
+| Tool | Detected | Notes |
+|---|---|---|
+| Apple Clang `-Wall -Wextra` | 178 / 184 | Broad heuristic warnings; can be silenced |
+| **RustifyC** | **133 / 184** | Targeted; **zero false positives; enforcement is mandatory** |
+
+> **Important context:** The 51 cases RustifyC misses are primarily heap-allocated buffers (`malloc`), pointer arithmetic (`ptr + offset`), and string function overflows (`strcpy`, `sprintf`) — patterns outside its current scope. Within its target domain, precision is 100% and enforcement cannot be bypassed.
 
 ---
 
@@ -245,16 +253,32 @@ Instrumentation Rate: 27% (3/11 array accesses)
 
 ## 🔬 How It Compares
 
+RustifyC and Clang `-Wall` solve **different problems** — Clang warns broadly (and can be ignored); RustifyC enforces precisely (and cannot be bypassed).
+
 | Feature | Standard C | Clang `-Wall` | AddressSanitizer | **RustifyC** | Rust |
 |---|---|---|---|---|---|
-| Static OOB detection | ❌ | ⚠️ Partial | ❌ | ✅ | ✅ |
-| Dynamic OOB detection | ❌ | ❌ | ✅ (2× slowdown) | ✅ (near-zero overhead) | ✅ |
-| Uninitialized memory | ❌ | ⚠️ Warning only | ❌ | ✅ Blocks | ✅ |
-| Integer overflow | ❌ | ❌ | ❌ | ✅ Hardware trap | ✅ (debug) |
-| Dangling pointers | ❌ | ⚠️ Warning only | ❌ | ✅ Blocks compile | ✅ Borrow checker |
-| Zero-cost safe loops | N/A | N/A | ❌ | ✅ SCEV proof | ✅ |
-| Requires source changes | N/A | N/A | ❌ | **❌ None** | ✅ Full rewrite |
-| Production-safe | ✅ | ✅ | ❌ (perf hit) | **✅** | ✅ |
+| Static OOB on stack arrays | ❌ | ⚠️ Partial | ❌ | ✅ Blocks compile | ✅ |
+| Dynamic OOB on stack arrays | ❌ | ❌ | ✅ (2× slowdown) | ✅ (minimal overhead) | ✅ |
+| Heap buffer OOB (`malloc`) | ❌ | ❌ | ✅ | ⚠️ Not yet | ✅ |
+| Uninitialized stack variables | ❌ | ⚠️ Warning only | ❌ | ✅ Blocks | ✅ |
+| Integer overflow (signed) | ❌ | ❌ | ❌ | ✅ Hardware trap | ✅ (debug) |
+| Dangling stack pointers | ❌ | ⚠️ Warning only | ❌ | ✅ Blocks compile | ✅ Borrow checker |
+| Zero-cost safe loops (SCEV) | N/A | N/A | ❌ | ✅ Math proof | ✅ |
+| False positives | N/A | Common | Rare | **Zero** | Zero |
+| Checks can be ignored/disabled | N/A | ✅ (pragmas) | ✅ | **❌ Enforced** | ❌ Enforced |
+| Requires source changes | N/A | No | No | **No** | Full rewrite |
+
+## ⚠️ Current Limitations
+
+RustifyC is a targeted research tool with a well-defined scope. The following are known limitations:
+
+- **Heap buffers not instrumented** — Arrays allocated with `malloc`/`calloc` are raw pointers in the IR; they don't appear as `ArrayType` GEPs, so bounds checks are not injected.
+- **Pointer arithmetic not checked** — `*(ptr + i)` is not the same IR pattern as `ptr[i]` when `ptr` is a raw pointer; RustifyC currently only instruments the latter.
+- **String function overflows** — `strcpy`, `sprintf`, `memcpy` with wrong sizes are undetected; RustifyC does not model library function semantics.
+- **Conditional uninitialization (one FN)** — When optimization simplifies conditional-init paths, `MemoryPhi` nodes can collapse in ways that hide one uninitialized read.
+- **Requires LLVM 15** — The New Pass Manager plugin API is version-specific.
+
+These tradeoffs are intentional for an MVP: by focusing on a precise subset, RustifyC achieves **zero false positives**, which is more useful in practice than a high-recall, noisy warning system.
 
 ---
 
